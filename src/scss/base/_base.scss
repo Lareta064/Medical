@@ -1,0 +1,115 @@
+* {
+	box-sizing: border-box;
+  }
+  
+  html {
+	scroll-behavior: smooth;
+  }
+  
+  html,
+  body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	color: #000;
+	font-family: $ff;
+	font-size: 18px;
+	-webkit-font-smoothing: antialiased;
+  }
+  .noscroll {
+	overflow: hidden;
+  }
+
+  a,
+  a:hover {
+	text-decoration: none;
+  }
+  
+  ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+	padding: 0;
+	margin: 0;
+  }
+  figure {
+	margin: 0;
+  }
+  img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+  }
+  
+  input,
+  button {
+	outline: none;
+  }
+  
+  button {
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+	cursor: pointer;
+  }
+  
+  section {
+	
+  }
+  input[type="radio"], input[type='checkbox'], input[type="submit"]{
+	  appearance: none;
+	  -moz-appearance: none;
+  -webkit-appearance: none;
+  }
+.container{
+	width: 1232px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	@media(max-width: 1279px){
+		width: 1170px;
+	}
+	@media(max-width: 1199px) {
+		width: 990px;
+	}
+	@media(max-width: 991px) {
+		width: 760px;
+	}
+	@media(max-width: 767px) {
+		width: 570px;
+	}
+	@media(max-width: 574px) {
+		width: 100%;
+	}
+}
+
+/*============= TYPOGRAPHY =============*/
+.title-1{
+	font-weight: 800;
+	font-size: 53px;
+	line-height: 1;
+	color: $blue;
+	@media(max-width:767px){
+		font-size: 31px;
+	}
+}
+.title-2 {
+	font-weight: 800;
+	font-size: 35px;
+	line-height: 1.22;
+	color: $blue;
+
+	@media(max-width:767px) {
+		font-size: 27px;
+		line-height: 1.15;
+	}
+}
