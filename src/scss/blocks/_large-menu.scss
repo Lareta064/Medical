@@ -1,0 +1,34 @@
+.large-menu{
+	background-color: $mint;
+	padding-bottom: 26px;
+	padding-top: 26px;
+	
+}
+.large-menu-content{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	height: 450px;
+	
+}
+.large-menu-list{
+	padding-bottom: 26px;
+	&:nth-last-child(-n+3){
+		padding-bottom: 0;
+	}
+	
+	h3{
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 32px;
+		color: #37F1F4;
+		margin-bottom: 15px;
+	}
+	li a{
+		font-weight: 600;
+		font-size: 19px;
+		line-height: 37px;
+		color: #ffffff ;
+		padding-top: 6px;
+		padding-bottom: 6px;
+	}
+}

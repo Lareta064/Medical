@@ -1,0 +1,7 @@
+mixin menu-list(title, items)
+	.large-menu-list
+		h3 #{title}
+		ul
+			each item in items
+				li
+					a(href="#") #{item.text}

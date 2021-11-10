@@ -1,10 +1,61 @@
 header.header
+	//============= HEADER TOP ======================
 	.header-top
 		.container
-			.header-content
+			.header-content.d-flex
 				a(href="index.html").logo
 					img(src="./img/logo.png", width='224' alt="logo")
 				.header-buttons
 					a(href="tel:88003014374" ).phone-link 8 (800) 301-43-74
 					button.button.button-small Перезвоните мне
 					button.button.button-small--orange Online-консультация
+	
+	//============= HEADER NAVIGATION ======================
+	.header-bottom
+		.container
+			.header-bottom-content.d-flex
+				.header-navigation
+					ul
+						li
+							a(href="#") Направления
+						li
+							a(href="#") Врачи
+						li
+							a(href="#") Адреса
+						li
+							a(href="#") Для пациентов
+						li
+							a(href="#") Для врачей
+				a(href="tel:88003014374" ).phone-link 8 (800) 301-43-74
+				.header-search
+					button.large-menu-btn Все разделы
+					button.search-button
+
+	//============= LARGE MENU ======================
+	.large-menu
+		.container
+			.large-menu-content.scroll-box
+				+menu-list('Лечение позвоночника', [{text:'Лечение сколиоза у детей'},
+				{text:'Лечение сколиоза у взрослых '},
+				{text:'Корсет Шено'},
+				{text:'Лечебная гимнастика'}])
+				+menu-list('Лечение позвоночника', [{text:'Лечение сколиоза у детей'},
+				{text:'Лечение сколиоза у взрослых '},
+				{text:'Корсет Шено'},
+				{text:'Лечебная гимнастика'}])
+				+menu-list('Лечение позвоночника', [{text:'Лечение сколиоза у детей'},
+				{text:'Лечение сколиоза у взрослых '},
+				{text:'Корсет Шено'},
+				{text:'Лечебная гимнастика'}])
+				+menu-list('Лечение при травмах', [{text:'Индивидуальная обувь'},
+				{text:'Стельки '},
+				{text:'Аппараты'},
+				{text:'Ортопедические аксессуары'}])
+				+menu-list('Лечение при травмах', [{text:'Индивидуальная обувь'},
+				{text:'Стельки '},
+				{text:'Аппараты'},
+				{text:'Ортопедические аксессуары'}])
+				+menu-list('Лечение при травмах', [{text:'Индивидуальная обувь'},
+				{text:'Стельки '},
+				{text:'Аппараты'},
+				{text:'Ортопедические аксессуары'}])

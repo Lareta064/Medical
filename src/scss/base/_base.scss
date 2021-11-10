@@ -91,7 +91,31 @@
 		width: 100%;
 	}
 }
+.d-flex{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.scroll-box{
+	overflow:hidden;
+	overflow-y: auto;
 
+	&::-webkit-scrollbar {
+		width: 5px;
+		height: 15px;
+		background-color: #C6DADB;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: #FFA046;
+		border-radius: 6px;
+	}
+
+	&::-webkit-scrollbar-track {
+		border-radius: 8px;
+		background-color: #C6DADB;
+	}
+}
 /*============= TYPOGRAPHY =============*/
 .title-1{
 	font-weight: 800;
