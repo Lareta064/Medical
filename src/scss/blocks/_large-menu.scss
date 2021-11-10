@@ -1,3 +1,22 @@
+.header-dropdown{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
+	transform: translateY(100%);
+}
+.header-dropdown__block{
+	max-height: 0;
+	height: 0;
+	overflow: hidden;
+	transition:.5s;
+}
+.header-dropdown__block.active{
+	height: auto;
+	max-height: 470px;
+}
+
 .large-menu{
 	background-color: $mint;
 	padding-bottom: 26px;
@@ -11,7 +30,8 @@
 	
 }
 .large-menu-list{
-	padding-bottom: 26px;
+	// padding-bottom: 26px;
+	padding-right: 15px;
 	&:nth-last-child(-n+3){
 		padding-bottom: 0;
 	}

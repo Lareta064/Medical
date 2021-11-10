@@ -1,6 +1,3 @@
-body{
-	height: 2000px;
-}
 .header{
 	position: sticky;
 	top: -85px;
@@ -13,8 +10,8 @@ body{
 	.button{font-weight: 600; margin-left: 8px;}
 
 	&-bottom-content{
-		padding-top: 12px;
-		padding-bottom: 12px;
+		padding-top: 2px;
+		padding-bottom: 2px;
 		.phone-link{
 			display: none;
 		}
@@ -26,18 +23,30 @@ body{
 	&-navigation{
 		ul{
 			display: flex;
+			
+			height: 50px;
+			li{
+				display: flex;
+				align-items: center;
+				flex-shrink: 0;
+			}
 			li +li {
 				margin-left: 15px;
 			}
 			a{
 				padding: 5px;
+				padding-top: 10px;
+				padding-bottom: 10px;
 				font-size: 20px;
 				line-height: 23px;
 				color: $mint;
+				
 			}
+			
 			li:first-child a{
 				padding-left: 0;
 			}
+			
 		}
 	}
 	&-search{
@@ -68,17 +77,25 @@ body{
 	padding-right: 42px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	&:after{
+	height: 50px;
+	font-size: 20px;
+	line-height: 23px;
+	
+	color: #06323E;
+	&:before{
 		content: '';
 		position: absolute;
 		right: 0;
-		top: 8px;
+		top: 50%;
+		transform: translateY(-50%);
 		width: 35px;
 		height: 20px;
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='36' height='19' viewBox='0 0 36 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.566406 2L35.5664 2' stroke='%2300859C' stroke-width='3'/%3e%3cpath d='M0.566406 10L35.5664 10' stroke='%2300859C' stroke-width='3'/%3e%3cline x1='0.566406' y1='17.5' x2='35.5664' y2='17.5' stroke='%2300859C' stroke-width='3'/%3e%3c/svg%3e");
 		background-size: contain;
 		background-repeat: no-repeat;
 	}
+	
+	
 }
 .search-button {
 	position: relative;
@@ -90,4 +107,23 @@ body{
 	background-image: url(../img/icons/search.png);
 	margin-left: 17px;
 
+}
+/*HOVER EFFECT*/
+.large-menu-btn,
+.header .header-navigation li{
+	position: relative;
+	&:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -2px;
+		width: 0;
+		height: 2px;
+		background-color: $orange;
+		transition: .3s;
+	}
+	// &:hover:after,
+	&.active:after {
+		width: 100%;
+	}
 }
