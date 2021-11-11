@@ -3,6 +3,7 @@
 		margin-bottom: 16px;
 		input{
 			display: block;
+			width: 100%;
 			height: 44px;
 			border: none;
 			border-bottom: 1px solid #5E5E5E;
@@ -17,7 +18,16 @@
 			}
 		}
 	}
-	.form-button{margin-top: 40px;}
+	.form-button{
+		margin-top: 40px;
+		display: flex;
+		justify-content: center;
+		
+		@media (max-width: 767px) {
+			margin-top: 20px;
+
+		}
+	}
 	.info-text{
 		font-weight: 600;
 		font-size: 18px;
@@ -27,5 +37,8 @@
 		text-align: center;
 		display: block;
 		padding-top: 10px;
+		@media (max-width: 767px) {
+			font-size: 16px;
+		}
 	}
 }

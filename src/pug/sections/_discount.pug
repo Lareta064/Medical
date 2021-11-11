@@ -7,11 +7,14 @@ section.discount
 				.section-header__button 
 					a(href="#").button Все акции
 			
+			//============== DESCKTOP CADRS ===============
+			
 			.card-grid
+				//===== карточка акция ======
 				.card-grid__item
 					.card-grid__item-content
 						h3 Хочу корсет
-						p Конкурс, где мы разыгрываем ортопедическое изделие
+						p Конкурс, где мы разыг&shy;рываем ортопедическое изделие
 						form.light-form()
 							.form-group
 								input(type="text" name="user_name" placeholder="Имя")
@@ -20,6 +23,7 @@ section.discount
 							.form-button
 								button.button.button-big--dark(type="submit") Участвовать
 							a(href="#!").info-text Условия конкурса
+				//===== карточка акция ======
 				.card-grid__item
 					.card-grid__item-header 
 						p Онлайн консультация
@@ -27,9 +31,44 @@ section.discount
 						.price-block 0 &#8381;
 						a(href="#").button.button-slim--orange Записаться
 
+				//===== карточка акция ======
 				.card-grid__item
-					.card-grid__item-header 
+					.card-grid__item-header
 						p 8 занятий гимнастикой
 					.card-grid__item-footer.d-flex
 						.price-block 5 500 &#8381;
 						a(href="#").button.button-slim--orange Записаться
+				
+				//============== SLIDER MOBILE CADRS ===============
+			.swiper
+				.card-grid.card-grid-slider.swiper-wrapper
+					//=====одна карточка ============
+					.card-grid__item.swiper-slide
+						.card-grid__item-content
+							h3 Хочу корсет
+							p Конкурс, где мы разыг&shy;рываем ортопедическое изделие
+							form.light-form()
+								.form-group
+									input(type="text" name="user_name" placeholder="Имя")
+								.form-group
+									input(type="text" name="user_phone" placeholder="Телефон")
+								.form-button
+									button.button.button-big--dark(type="submit") Участвовать
+								a(href="#!").info-text Условия конкурса
+					//=====одна карточка ============
+					.card-grid__item.swiper-slide
+						.card-grid__item-header
+							p Онлайн консультация
+						.card-grid__item-footer.d-flex
+							.price-block 0 &#8381;
+							a(href="#").button.button-slim--orange Записаться
+					//=====одна карточка ============
+					.card-grid__item.swiper-slide
+						.card-grid__item-header
+							p Онлайн консультация
+						.card-grid__item-footer.d-flex
+							.price-block 5 500 &#8381;
+							a(href="#").button.button-slim--orange Записаться
+					
+				
+				.swiper-pagination

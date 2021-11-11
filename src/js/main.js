@@ -34,3 +34,26 @@ for(let i=0; i<menuItems.length; i++ ){
 		}
 	});
 }
+/* slider*/
+const swiper = new Swiper('.swiper', {
+  centeredSlides: true,
+//   slidesPerView: 1,
+  loop: true,
+  autoplay: {
+	delay: 5000,
+	},
+	speed:2000,
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+	 clickable: true,
+  },
+
+  // Navigation arrows
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+
+  
+});
