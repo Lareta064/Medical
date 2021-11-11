@@ -1,0 +1,43 @@
+.team{
+	background-color: #F8F8F9;
+}
+.team-tabs{
+	display: flex;
+	height: 550px;
+	.scroll-box{direction: rtl; width: 40%;}
+	.tabs-button{
+	padding-left: 30px;	
+	direction: ltr;
+	}
+	.tabs-content{
+		width: 60%;
+	}
+	.tabs-button__item{
+		display: flex;
+		align-items: center;
+		cursor:pointer;
+	}
+	.tabs-button__img{
+		width: 110px;
+		padding: 3px;
+		margin-right: 25px;
+	}
+	.tabs-button__text{
+		h4{
+			display: flex;
+			flex-direction: column;
+			font-weight: 600;
+			font-size: 17px;
+			line-height: 20px;
+			color: #00859C;
+		}
+		p{
+			font-weight: 300;
+			font-size: 15px;
+			line-height: 17px;
+			color: #06323E;
+			padding-top: 8px;
+		}
+	}
+	.tabs-button__item+.tabs-button__item{margin-top: 70px;}
+} 

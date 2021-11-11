@@ -93,6 +93,9 @@
 		max-width:430px;
 	}
 }
+.pb-50{
+	padding-bottom: 50px;
+}
 .d-flex{
 	display: flex;
 	align-items: center;
@@ -102,6 +105,8 @@
 	overflow:hidden;
 	overflow-y: auto;
 
+	scrollbar-color: #FFA046 #C6DADB;
+	scrollbar-width: thin;
 	&::-webkit-scrollbar {
 		width: 5px;
 		height: 15px;
