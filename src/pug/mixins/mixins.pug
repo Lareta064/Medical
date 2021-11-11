@@ -5,3 +5,18 @@ mixin menu-list(title, items)
 			each item in items
 				li
 					a(href="#") #{item.text}
+mixin main-banner(title, text, imgSrc)
+	.main-banner
+		.container
+			.main-banner-content.d-flex
+				//======TEXT=====
+				.main-banner__text
+					h1.title-1 !{title}
+					.text-24
+						p !{text}
+					button.button.button-big--dark(type="button") Записаться на прием
+				
+				//======IMAGE=====
+				.main-banner__img
+					.img-round
+						img(src="./img/header/"+ imgSrc +".jpg", width="429" alt="img")
