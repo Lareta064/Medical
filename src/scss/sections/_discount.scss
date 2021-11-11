@@ -3,6 +3,10 @@
 }
 .discount-content .swiper{
 	padding-bottom: 50px;
+	display: none;
+	@media (max-width: 767px) {
+		display: block;
+	}
 	.swiper-pagination-bullet{
 		width: 11px;
 		height: 11px;
