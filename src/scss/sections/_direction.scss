@@ -2,7 +2,7 @@
 	margin-top: 30px;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(auto, 150px);
+	
 	row-gap: 35px;
 	column-gap: 35px;
 	@media(max-width:1199px){
@@ -11,6 +11,13 @@
 	}
 	@media(max-width:991px) {
 		grid-template-columns: repeat(3, 1fr);
+	}
+		@media(max-width:767px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	@media(max-width:599px) {
+		grid-template-columns: repeat(1, 1fr);
+		
 	}
 }
 .direction-block{
@@ -55,4 +62,9 @@
 			}
 		}
 	}
+		@media(max-width:767px) {
+			// .direction-card {max-width: 300px;}
+			
+		}
+
 }

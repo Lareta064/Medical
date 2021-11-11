@@ -1,0 +1,31 @@
+.light-form{
+	.form-group{
+		margin-bottom: 16px;
+		input{
+			display: block;
+			height: 44px;
+			border: none;
+			border-bottom: 1px solid #5E5E5E;
+			font-size: 22px;
+			color: #626D6D;
+			font-family: $ff;
+			background-color: transparent;
+			&::placeholder{
+				font-size: 22px;
+				color: #626D6D;
+				font-family: $ff;
+			}
+		}
+	}
+	.form-button{margin-top: 40px;}
+	.info-text{
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 21px;
+		text-decoration-line: underline;
+		color: #000000;
+		text-align: center;
+		display: block;
+		padding-top: 10px;
+	}
+}

@@ -1,0 +1,35 @@
+section.discount
+	.container
+		.discount-content
+			.section-header.d-flex 
+				.section-header__title 
+					h2.title-2 Акции
+				.section-header__button 
+					a(href="#").button Все акции
+			
+			.card-grid
+				.card-grid__item
+					.card-grid__item-content
+						h3 Хочу корсет
+						p Конкурс, где мы разыгрываем ортопедическое изделие
+						form.light-form()
+							.form-group
+								input(type="text" name="user_name" placeholder="Имя")
+							.form-group
+								input(type="text" name="user_phone" placeholder="Телефон")
+							.form-button
+								button.button.button-big--dark(type="submit") Участвовать
+							a(href="#!").info-text Условия конкурса
+				.card-grid__item
+					.card-grid__item-header 
+						p Онлайн консультация
+					.card-grid__item-footer.d-flex
+						.price-block 0 &#8381;
+						a(href="#").button.button-slim--orange Записаться
+
+				.card-grid__item
+					.card-grid__item-header 
+						p 8 занятий гимнастикой
+					.card-grid__item-footer.d-flex
+						.price-block 5 500 &#8381;
+						a(href="#").button.button-slim--orange Записаться
