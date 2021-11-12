@@ -1,0 +1,67 @@
+.faq{
+	padding-bottom: 50px;
+	padding-top: 50px;
+	.faq-tabs{position: relative;}
+	.faq-tabs__buttons-block{
+		padding-bottom: 24px;
+		overflow: hidden;
+	}
+	.faq-tabs__buttons{
+		
+		display: flex;
+		
+		}
+		.faq-tabs__arrow{
+			position: absolute;
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			cursor:pointer;
+			right: -70px;
+			top: 0;
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='34' height='35' viewBox='0 0 34 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='34' height='35' fill='%2300859C'/%3e%3cpath d='M8.5 17.4997V13.6059C8.5 8.77886 11.8292 6.79553 15.895 9.21636L19.1675 11.1705L22.44 13.1247C26.5058 15.5455 26.5058 19.4976 22.44 21.9184L19.1675 23.8726L15.895 25.8267C11.8292 28.2038 8.5 26.2351 8.5 21.3934V17.4997Z' stroke='white' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+	
+	.faq-tabs__btn{
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 28px;
+		display: flex;
+		align-items: center;
+		color: #00859C;
+		// width: 280px;
+		user-select: none;
+		flex-shrink: 0;
+		text-align: left;
+		&+.faq-tabs__btn{
+			margin-left: 35px;
+		}
+		&.active{
+			color: #06323E;
+		}
+	}
+	.faq-tabs-wrapper{
+		padding-top: 56px;
+	}
+	.faq-tabs__content{
+		display: none;
+	}
+	.faq-tabs__content.active{
+		display: flex;
+		justify-content: space-between;
+		
+	}
+	.faq-content__text, .faq-content__img{width: 48%;}
+	.faq-content__text{padding-top: 19px;}
+	.faq-content__text p{
+		font-size: 20px;
+		line-height: 27px;
+		color: #5E5E5E;
+		& +p{
+			margin-top: 30px;
+		}
+	}
+}

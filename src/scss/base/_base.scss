@@ -123,6 +123,29 @@
 		background-color: #C6DADB;
 	}
 }
+.scroll-box--hz{
+	overflow:hidden;
+	overflow-x: auto;
+
+	scrollbar-color: #FFA046 #C6DADB;
+	scrollbar-width: thin;
+
+	&::-webkit-scrollbar {
+		width: 15px;
+		height: 5px;
+		background-color: #C6DADB;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: #FFA046;
+		border-radius: 6px;
+	}
+
+	&::-webkit-scrollbar-track {
+		border-radius: 8px;
+		background-color: #C6DADB;
+	}
+}
 .img-round{
 position: relative;
 width: 100%;

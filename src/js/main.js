@@ -62,8 +62,11 @@ function pageTabs(tabBtn, tabContent){
 const headerNav = document.getElementById('headerNav');
 const headerDrop = document.getElementById('headerDrop');
 const teamtabs = document.getElementById('teamTabs');
+const faqTabs = document.getElementById('faqTabs');
 pageTabsToggle(headerNav,  headerDrop);
 pageTabs(teamTabs,  teamTabs);
+pageTabs(faqTabs,  faqTabs);
+
 /* ======swiper slider========*/
 const swiper = new Swiper('.swiper', {
   centeredSlides: true,
@@ -77,3 +80,15 @@ const swiper = new Swiper('.swiper', {
 	 clickable: true,
   }
 });
+const swiper2 = new Swiper('.faq-tabs__buttons-block', {
+  slidesPerView: 3.5,
+ loop: true,
+  navigation: {
+    nextEl: '#faqArrow',
+   
+  },
+});
+/*faq arrow click*/
+const faqArrow = document.getElementById('faqArrow');
+
+
