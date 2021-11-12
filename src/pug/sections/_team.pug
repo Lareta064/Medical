@@ -8,44 +8,83 @@ section.team
 						p Специализация врачей и их подход к работе
 				.section-header__button
 					a(href="#").button Все врачи
-		.team-tabs
+		.team-tabs#teamTabs
+			//=========== БЛОК СЛЕВА С МАЛ ФОТО ==============
 			.scroll-box
 				.tabs-button
 					//===== tab block =====
-					.tabs-button__item
-						.tabs-button__img.img-round
+					.tabs-button__item.active(data-role="1")
+						.tabs-item__img.img-round
 							img(src="./img/doctor.jpg", width="196" alt="img")
-						.tabs-button__text
+						.tabs-item__title
 							h4
 								span Крохалев
 								span Никита Владимирович
 							p врач - ортопед, ортезист
 					//===== tab block =====
-					.tabs-button__item
-						.tabs-button__img.img-round
+					.tabs-button__item(data-role="2")
+						.tabs-item__img.img-round
 							img(src="./img/doctor.jpg", width="196" alt="img")
-						.tabs-button__text
+						.tabs-item__title
 							h4
 								span Крохалев
 								span Никита Владимирович
 							p врач - ортопед, ортезист
 					//===== tab block =====
-					.tabs-button__item
-						.tabs-button__img.img-round
+					.tabs-button__item(data-role="3")
+						.tabs-item__img.img-round
 							img(src="./img/doctor.jpg", width="196" alt="img")
-						.tabs-button__text
+						.tabs-item__title
 							h4
 								span Крохалев
 								span Никита Владимирович
 							p врач - ортопед, ортезист
 					//===== tab block =====
-					.tabs-button__item
-						.tabs-button__img.img-round
+					.tabs-button__item(data-role="4")
+						.tabs-item__img.img-round
 							img(src="./img/doctor.jpg", width="196" alt="img")
-						.tabs-button__text
+						.tabs-item__title
 							h4
 								span Крохалев
 								span Никита Владимирович
 							p врач - ортопед, ортезист
-
-			.tabs-content
+			
+			//=========== БЛОК СПРАВА С БОЛЬШ ФОТО ВРАЧА ==============
+			.tabs-content-wrapper
+				//========= ОПИСАНИЕ ВРАЧА ============
+				.tabs-content.active(data-content="1")
+					.tabs-content__head.d-flex
+						.tabs-item__img.img-round
+							img(src="./img/doctor.jpg", width="196" alt="img")
+						.tabs-item__title
+							h4
+								span Крохалев
+								span Никита Владимирович
+							.text-18.text-demi
+								p врач - ортопед, специалист по 3D коррекции позвоночника
+							.text-18
+								p Ведет первичный прием, делает 3D скан туловища, моделирует изделие, контролирует изготовление
+					.tabs-content__body
+						p #[strong Диагностика]  – наиважнейший этап. На первом приеме врач ортопед проведет осмотр спины пациента, груди, таза и ног на предмет асимметрии. Узнает жалобы пациента, проверит результаты анализов и рентген-снимков (при наличии).
+						p #[strong План лечения] Мы составляем план лечения, после изучения которого у Вас не должно остаться вопросов. В плане подробно расписаны цели лечения, примерные сроки, промежуточные точки контроля, методы, которые будет использовать. Даны все необходимые рекомендации и советы на время лечения. (психолог например и предложение сразу пройти).
+						button.show-content Весь текст
+				//========= ОПИСАНИЕ ВРАЧА ============
+				.tabs-content(data-content="2")
+					.tabs-content__head.d-flex
+						.tabs-item__img.img-round
+							img(src="./img/doctor.jpg", width="196" alt="img")
+						.tabs-item__title
+							h4
+								span Крохалев
+								span Никита Владимирович
+							.text-18.text-demi
+								p врач - ортопед, специалист по 3D коррекции позаоночника
+							.text-18
+								p Ведет первичный прием, делает 3D скан туловища, моделирует изделие, контролирует изготовление
+					.tabs-content__body
+						p #[strong Диагностика]  – наиважнейший этап. На первом приеме врач ортопед проведет осмотр спины пациента, груди, таза и ног на предмет асимметрии. Узнает жалобы пациента, проверит результаты анализов и рентген-снимков (при наличии).
+		//============ кнопки =========
+		.text-center
+			button.button.button--orange Записаться на прием
+		.section-header__button--mobile
+			a(href="#").button Все врачи
