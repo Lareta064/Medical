@@ -1,6 +1,9 @@
+/*============ВОПРОСЫ И ОТВЕТЫ==========*/
 .faq{
 	padding-bottom: 50px;
 	padding-top: 50px;
+	display: block;
+	@media(max-width:991px){display: none;}
 	.faq-tabs{position: relative;}
 	.faq-tabs__buttons-block{
 		padding-bottom: 24px;
@@ -63,5 +66,13 @@
 		& +p{
 			margin-top: 30px;
 		}
+	}
+}
+.faq-accordeon{	
+	display: none;
+	@media(max-width:991px) {
+		display: block;
+		padding-top: 20px;
+		padding-bottom: 20px;
 	}
 }

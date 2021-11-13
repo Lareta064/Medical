@@ -1,0 +1,57 @@
+/*============АККОРДЕОН ==========*/
+.accordeon-item {
+	margin-bottom: 20px;
+}
+
+.accordeon-item-header {
+	position: relative;
+	border-radius: 5px;
+	
+	padding: 15px;
+	cursor: pointer;
+	transition: .5s;
+	padding-left: 40px;
+}
+
+.accordeon-item-header::after {
+	content: "";
+	width: 15px;
+	height: 15px;
+	border-top:2px solid rgba(94, 94, 94, .5);
+	border-right:2px solid rgba(94, 94, 94, .5);
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	transform: translate(0, -50%) rotate(135deg) ;
+	transition: .5s;
+}
+
+.accordeon-item-content {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease-out;
+	.accordeon-item__text {
+		padding-bottom: 20px;
+		p{
+			font-size: 19px;
+			line-height: 27px;			
+			color: #5E5E5E;
+			&+p{
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+.show::after {
+	border-top:2px solid $mint;
+	border-right:2px solid $mint;
+	transform: translate(0, -50%) rotate(-45deg);
+	
+}
+
+.loock {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height .5s;
+}
