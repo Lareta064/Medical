@@ -153,6 +153,78 @@ const swiper2 = new Swiper('.faq-tabs__buttons-block', {
   // kickstart
   breakpointChecker();
 })(); /* IIFE end */
+(function() {
+
+  'use strict';
+
+  // breakpoint where swiper will be destroyed
+  // and switches to a dual-column layout
+  const breakpoint = window.matchMedia( '(min-width:992px)' );
+
+  // keep track of swiper instances to destroy later
+  let mySwiper;///////////////////////////////////////////
+
+  const breakpointChecker = function() {
+
+    // if larger viewport and multi-row layout needed
+    if ( breakpoint.matches === true ) {
+
+      // clean up old instances and inline styles when available
+	  if ( mySwiper !== undefined ) mySwiper.destroy( true, true );
+
+	  // or/and do nothing
+	  return;
+
+      // else if a small viewport and single column layout needed
+      } else if ( breakpoint.matches === false ) {
+
+        // fire small viewport version of swiper
+        return enableSwiper();
+
+      }
+
+  };
+  const enableSwiper = function() {
+
+    mySwiper = new Swiper ('.articles-swiper', {
+
+      loop: true,
+      
+      slidesPerView: 1,
+	  spaceBetween: 30,
+      centeredSlides: true,
+
+      a11y: true,
+      keyboardControl: true,
+      grabCursor: true,
+
+      // pagination
+	  pagination: {
+    	el: '.articles-swiper-pagination',
+		 clickable: true,
+  		},
+		  breakpoints: {
+        574: {
+          slidesPerView: 1.8,
+		  spaceBetween: 10,
+         
+        },
+		768: {
+          slidesPerView: 2.5,
+		  spaceBetween: 30,
+         
+        }
+	}
+    });
+
+  };
+
+  // keep an eye on viewport size changes
+  breakpoint.addListener(breakpointChecker);
+
+  // kickstart
+  breakpointChecker();
+})(); /* IIFE end */
 
 /*============faq accordeon=============*/
 const accordeonTitle = document.querySelectorAll('.accordeon-item-header');

@@ -19,15 +19,16 @@
 	width: 73.8%;
 	@media(min-width:1200px){width: 100%;}
 }
-
+.swiper-pagination-bullet.swiper-pagination-bullet-active{background-color: $mint;}
 @media (min-width: 768px) {
+	
 	.swiper-products .swiper-wrapper {
 		/* swiper is disabled at this breakpoint */
 		/* wrap slides  */
 		flex-wrap: wrap;
 		
 	}
-
+     
 	.swiper-products .swiper-slide {
 		/* swiper is disabled at this breakpoint */
 		/* going for a 2 column layout here */
@@ -35,6 +36,7 @@
 		max-width:573px;
 	}
 }
+.articles-swiper-pagination,
 .swiper-products-pagination {
 	/* show on small viewports */
 	display: flex;
@@ -42,12 +44,14 @@
 }
 
 @media (min-width: 768px) {
+	
 	.swiper-products-pagination {
 		/* swiper is disabled at this breakpoint */
 		display: none;
 	}
 }
 @media (min-width: 992px) {
+	.articles-content.swiper-wrapper,
 	.swiper-products .swiper-wrapper {
 		width: 100%;
 	}
