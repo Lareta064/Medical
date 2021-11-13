@@ -2,15 +2,22 @@
 section.faq
 	.container
 		.faq-tabs#faqTabs
-			.faq-tabs__arrow#faqArrow
+			#faqArrow
+				.faq-tabs__arrow
+			
 			.faq-tabs__buttons-block
 				.faq-tabs__buttons.swiper-wrapper
-					button.faq-tabs__btn.swiper-slide(data-role="1") Почему я не могу начать с других методов?
-					button.faq-tabs__btn.swiper-slide(data-role="2") Как носить корсет в офисе?
-					button.faq-tabs__btn.swiper-slide(data-role="3") Как привыкать к корсету Шено?
-					button.faq-tabs__btn.swiper-slide(data-role="4") Еще один  четвертый вопрос
-					button.faq-tabs__btn.swiper-slide(data-role="5") Еще один какой-то пятый вопрос
-				
+					.swiper-slide(data-role="1")
+						button.faq-tabs__btn.swiper-slide Почему я не могу начать с других методов?
+					.swiper-slide(data-role="2")
+						button.faq-tabs__btn.swiper-slide Как носить корсет в офисе?
+					.swiper-slide(data-role="3")
+						button.faq-tabs__btn.swiper-slide Как привыкать к корсету Шено?
+					.swiper-slide(data-role="4")
+						button.faq-tabs__btn.swiper-slide Еще один  четвертый вопрос
+					.swiper-slide(data-role="5")
+						button.faq-tabs__btn.swiper-slide Еще один какой-то пятый вопрос
+				.faq-scrollbar
 
 			.faq-tabs-wrapper
 				.faq-tabs__content.active(data-content="1")
@@ -20,7 +27,37 @@ section.faq
 						p Прием состоит из диагностики, изучения анализов и снимков, рекомендаций доктора и составления плана лечения и реабилитации.
 					.faq-content__img
 						img(src="./img/img.jpg", width="495"  alt="alt")
+				
 				.faq-tabs__content(data-content="2")
-					h1 content 2
+					.faq-content__text
+						p content 22222
+						p Прием состоит из диагностики, изучения анализов и снимков, рекомендаций доктора и составления плана лечения и реабилитации.
+						p Прием состоит из диагностики, изучения анализов и снимков, рекомендаций доктора и составления плана лечения и реабилитации.
+					.faq-content__img
+						img(src="./img/img.jpg", width="495"  alt="alt")
+				
+				.faq-tabs__content(data-content="3")
+					.faq-content__text
+						p content-33333
+						p Прием состоит из диагностики, изучения анализов и снимков, рекомендаций доктора и составления плана лечения и реабилитации.
+						p Прием состоит из диагностики, изучения анализов и снимков, рекомендаций доктора и составления плана лечения и реабилитации.
+					.faq-content__img
+						img(src="./img/img.jpg", width="495"  alt="alt")
+				
+				.faq-tabs__content(data-content="4")
+					.faq-content__text
+						p content-444444
+						p Прием состоит из диагностики, изучения анализов и снимков, рекомендаций доктора и составления плана лечения и реабилитации.
+						p Прием состоит из диагностики, изучения анализов и снимков, рекомендаций доктора и составления плана лечения и реабилитации.
+					.faq-content__img
+						img(src="./img/img.jpg", width="495"  alt="alt")
+				
+				.faq-tabs__content(data-content="5")
+					.faq-content__text
+						p content-55555
+						p Прием состоит из диагностики, изучения анализов и снимков, рекомендаций доктора и составления плана лечения и реабилитации.
+						p Прием состоит из диагностики, изучения анализов и снимков, рекомендаций доктора и составления плана лечения и реабилитации.
+					.faq-content__img
+						img(src="./img/img.jpg", width="495"  alt="alt")
 
 //================= END ВОПРОСЫ И ОТВЕТЫ ================

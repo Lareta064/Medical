@@ -1,0 +1,125 @@
+.products{overflow: hidden;}
+.products-card{
+	width: 100%;
+}
+.products-wrapper{
+	
+	display: flex;
+	justify-content: space-between;
+	
+}
+/******************************************/
+
+
+.swiper-products .swiper-wrapper {
+	/* now pagination is below slides */
+	margin-bottom: 30px;
+	/* just enough width so slides handing off screen are partially visible */
+	width: 73.8%;
+	@media(min-width:1200px){width: 100%;}
+}
+
+@media (min-width: 768px) {
+	.swiper-products .swiper-wrapper {
+		/* swiper is disabled at this breakpoint */
+		/* wrap slides  */
+		flex-wrap: wrap;
+		
+	}
+
+	.swiper-products .swiper-slide {
+		/* swiper is disabled at this breakpoint */
+		/* going for a 2 column layout here */
+		width: 48%;
+		max-width:573px;
+	}
+}
+.swiper-products-pagination {
+	/* show on small viewports */
+	display: flex;
+	justify-content: center;
+}
+
+@media (min-width: 768px) {
+	.swiper-products-pagination {
+		/* swiper is disabled at this breakpoint */
+		display: none;
+	}
+}
+@media (min-width: 992px) {
+	.swiper-products .swiper-wrapper {
+		width: 100%;
+	}
+}
+/********************************************/
+.products{
+	.products-card{
+		padding: 45px;
+		border-radius: 30px;
+		height: 100%;
+		background-color: #FFD058;
+		.button{
+			margin-top: 27px;
+		}
+		
+	}
+	.swiper-slide:nth-child(2)  .products-card {
+			background-color: #96D7FF;
+		}
+	.products-card__text{
+		width: 50%;
+		@media(max-width:767px){width: 100%;}
+		.text-box{
+			height: 180px;
+		overflow: hidden;
+		}
+		h3{
+			font-weight: 600;
+			font-size: 26px;
+			line-height: 1.22;
+			color: #000000;
+			margin-bottom: 4px;
+		}
+		p{
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 1.30;
+			color: #000000;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			overflow: hidden;
+		}
+	}
+	.products-card__img{
+		border-radius: 50%;
+		width: 200px;
+		img {
+			border-radius: 50%;
+		}
+		@media(max-width:1199px){
+			width: 120px;
+		}
+		@media(max-width:991px) {
+			width: 200px;
+		}
+		@media(max-width:767px) {
+			display: none;
+		}
+	}
+}
+@media(min-width:768px) and(max-width:991px){
+	.products-wrapper{
+		flex-direction: column;
+		.swiper-slide+.swiper-slide{
+			margin-top: 44px;
+		}
+		.products-card{width: 573px;}
+		
+	}
+}
+@media(min-width:992px) and(max-width:1199px) {
+.products-wrapper .products-card__text {
+			width: 68%;
+		padding-right: 10px;}
+}

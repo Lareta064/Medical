@@ -69,8 +69,8 @@ pageTabs(faqTabs,  faqTabs);
 
 /* ============swiper slider========*/
 const swiper = new Swiper('.swiper', {
-  centeredSlides: true,
-  loop: true,
+  
+  
   autoplay: {
 	delay: 5000,
 	},
@@ -82,12 +82,78 @@ const swiper = new Swiper('.swiper', {
 });
 const swiper2 = new Swiper('.faq-tabs__buttons-block', {
   slidesPerView: 3.5,
- loop: true,
+ 
   navigation: {
-    nextEl: '#faqArrow',
-   
+    nextEl: '#faqArrow'
   },
+  scrollbar:{
+	  	el:'.faq-scrollbar',
+		  draggable:true,
+  },
+  watchOverflow: 'true'
 });
+
+(function() {
+
+  'use strict';
+
+  // breakpoint where swiper will be destroyed
+  // and switches to a dual-column layout
+  const breakpoint = window.matchMedia( '(min-width:768px)' );
+
+  // keep track of swiper instances to destroy later
+  let mySwiper;///////////////////////////////////////////
+
+  const breakpointChecker = function() {
+
+    // if larger viewport and multi-row layout needed
+    if ( breakpoint.matches === true ) {
+
+      // clean up old instances and inline styles when available
+	  if ( mySwiper !== undefined ) mySwiper.destroy( true, true );
+
+	  // or/and do nothing
+	  return;
+
+      // else if a small viewport and single column layout needed
+      } else if ( breakpoint.matches === false ) {
+
+        // fire small viewport version of swiper
+        return enableSwiper();
+
+      }
+
+  };
+  const enableSwiper = function() {
+
+    mySwiper = new Swiper ('.swiper-products', {
+
+      loop: true,
+      
+      slidesPerView: 1,
+	  spaceBetween: 30,
+      centeredSlides: true,
+
+      a11y: true,
+      keyboardControl: true,
+      grabCursor: true,
+
+      // pagination
+	  pagination: {
+    	el: '.swiper-products-pagination',
+		 clickable: true,
+  		}
+    });
+
+  };
+
+  // keep an eye on viewport size changes
+  breakpoint.addListener(breakpointChecker);
+
+  // kickstart
+  breakpointChecker();
+})(); /* IIFE end */
+
 /*============faq accordeon=============*/
 const accordeonTitle = document.querySelectorAll('.accordeon-item-header');
 const accordeonContent = document.querySelectorAll('.accordeon-item-content');

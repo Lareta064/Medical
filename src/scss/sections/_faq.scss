@@ -3,6 +3,15 @@
 	padding-bottom: 50px;
 	padding-top: 50px;
 	display: block;
+	.faq-scrollbar {
+		height: 5px;
+		background-color: #C6DADB;
+		transform:translateY(20px);
+		.swiper-scrollbar-drag{
+			background-color: $orange;
+			border-radius: 5px;
+		}
+	}
 	@media(max-width:991px){display: none;}
 	.faq-tabs{position: relative;}
 	.faq-tabs__buttons-block{
@@ -14,14 +23,21 @@
 		display: flex;
 		
 		}
-		.faq-tabs__arrow{
+		#faqArrow{
 			position: absolute;
 			width: 60px;
 			height: 60px;
+			right: 0;
+			z-index: 5;
+			top: 0;
+			background-color: #fff;
+		}
+		.faq-tabs__arrow{
+			width: 100%;
+			height: 100%;
 			border-radius: 50%;
 			cursor:pointer;
-			right: -70px;
-			top: 0;
+			
 			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='34' height='35' viewBox='0 0 34 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='34' height='35' fill='%2300859C'/%3e%3cpath d='M8.5 17.4997V13.6059C8.5 8.77886 11.8292 6.79553 15.895 9.21636L19.1675 11.1705L22.44 13.1247C26.5058 15.5455 26.5058 19.4976 22.44 21.9184L19.1675 23.8726L15.895 25.8267C11.8292 28.2038 8.5 26.2351 8.5 21.3934V17.4997Z' stroke='white' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
 			background-repeat: no-repeat;
 			background-size: cover;
