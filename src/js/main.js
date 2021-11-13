@@ -185,8 +185,15 @@ for (i = 0; i < accordeonTitle.length; i++) {
 
             }
         }
-    })
+    });
 }
-
+/* price card hide-text*/
+const priceCardsLink = document.querySelectorAll('.price-card .dashed-link');
+for(let item of priceCardsLink){
+	item.addEventListener('click', ()=>{
+		item.nextElementSibling.classList.add('active');
+		item.remove();
+	})
+}
 
 

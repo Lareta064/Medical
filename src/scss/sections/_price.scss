@@ -1,0 +1,95 @@
+//=================PRICE ================
+.price{
+	padding-bottom: 35px;
+	.price-card{
+		padding: 30px 50px;
+		border-radius: 30px;
+		background: #F8F8F9;
+		@media (max-width: 767px) {
+		padding: 25px;
+		}
+		h4{
+			font-weight: 600;
+			font-size: 24px;
+			line-height: 29px;			
+			color: #00859C;
+			margin-bottom: 5px;
+			@media(max-width:767px){
+				font-size: 20px;
+				line-height: 24px;
+			}
+		}
+		p{
+			font-weight: 500;
+			font-size: 30px;
+			line-height: 35px;
+			color: #06323E;
+			margin-bottom: 15px;
+				@media(max-width:767px) {
+					font-size: 25px;
+					line-height: 29px;
+					margin-bottom: 12px;
+				}
+		}
+		.dashed-link{
+			display: none;
+			cursor:pointer;
+		}
+		ul li{
+			position: relative;
+			font-weight: 300;
+			font-size: 19px;
+			line-height: 182%;
+			color: #06323E;
+			padding-left: 35px;
+			@media(max-width:767px){
+				font-size: 17px;
+				line-height: 30px;
+			}
+			&+li{margin-top: 8px;}
+			&:after{
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 9px;
+				width: 19px;
+				height: 16px;
+				background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15.1852 20.9007C14.8606 21.2099 14.3459 21.1977 14.0367 20.8727C13.7272 20.5477 13.7402 20.0334 14.0648 19.7238L20.2975 13.8125H4.0625C3.614 13.8125 3.25 13.4485 3.25 13C3.25 12.5515 3.614 12.1875 4.0625 12.1875H20.2715L14.0648 6.27573C13.7398 5.96616 13.7272 5.45185 14.0367 5.12685C14.1964 4.95947 14.4105 4.87498 14.625 4.87498C14.8265 4.87498 15.028 4.94932 15.1852 5.09922L22.2739 11.8511C22.581 12.1578 22.75 12.5657 22.75 13C22.75 13.4343 22.581 13.8421 22.2597 14.1627L15.1852 20.9007Z' fill='%2300859C'/%3e%3c/svg%3e ");
+				background-repeat: no-repeat;
+				background-position: center;
+
+			}
+		}
+		.red-text{
+			margin-top: 24px;
+		}
+	}	
+}
+.price-cards-wrapper{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 30px;
+	row-gap: 30px;
+	@media(max-width:991px){
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+@media (max-width: 767px) {
+ .price .price-card .dashed-link {
+ 	display: block;
+ }
+ .price .price-card .price-card__list {
+ 	display: none;
+
+ 	&.active {
+ 		display: block;
+ 	}
+ }
+ .price  .section-header__button--mobile{
+	 display: block;
+	 margin-top: 20px;
+	 .button{width: 100%;}
+	 
+	}
+}
