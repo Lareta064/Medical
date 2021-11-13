@@ -4,6 +4,9 @@
 	padding-bottom: 0;
 	position: relative;
 	min-height: 675px;
+	@media(max-width:767px) {
+		min-height:unset;
+	}
 	.feedback-img{
 		position: absolute;
 		top: 0;
