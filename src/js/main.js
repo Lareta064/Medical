@@ -72,9 +72,13 @@ function pageTabsToggle(tabBtn, tabContent){
 			const thisData = menuItems[i].getAttribute('data-role');
 			for(let block of menuItemContent ){
 				block.classList.remove('active');
+				overlayBlock.classList.remove('active');
+				bodyEl.classList.remove('noscroll');
 				const contentData = block.getAttribute('data-content');				
 				if(thisData == contentData && menuItems[i].classList.contains('active')){
 					block.classList.add('active');
+					overlayBlock.classList.add('active');
+					bodyEl.classList.add('noscroll');
 				}
 			}
 		});
@@ -99,6 +103,7 @@ function pageTabs(tabBtn, tabContent){
 				const contentData = block.getAttribute('data-content');				
 				if(thisData == contentData && menuItems[i].classList.contains('active')){
 					block.classList.add('active');
+					
 				}
 			}
 		});
