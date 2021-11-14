@@ -9,7 +9,8 @@ header.header
 					a(href="tel:88003014374" ).phone-link 8 (800) 301-43-74
 					button.button.button-small Перезвоните мне
 					button.button.button-small--orange Online-консультация
-	
+				
+				
 	//============= HEADER NAVIGATION ======================
 	.header-bottom#headerNav
 		.container
@@ -29,7 +30,14 @@ header.header
 				a(href="tel:88003014374" ).phone-link 8 (800) 301-43-74
 				.header-search
 					button.large-menu-btn(data-role="6") Все разделы
-					button.search-button
+					button.search-button#showSearchForm
+				.header-form#headerForm
+					form.header-search-form(action="" method="method")
+						.close-search-form#closeSearch &#10006;
+						.form-group
+							input.border-field(type="text" placeholder="Поиск по сайту")
+						.form-btn
+							button.search-form-btn(type='submit')
 
 	//============= LARGE MENU ======================
 	.header-dropdown#headerDrop

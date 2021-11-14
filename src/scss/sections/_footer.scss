@@ -39,14 +39,14 @@
 		margin-top: 10px;
 	}
 }
-.footer-buttons{
+.contacts-block{
 	display: flex;
 	flex-direction: column;
 	margin-left: auto;
 	.button +.button{margin-top: 13px;}
-	
 }
-.footer-phone{
+
+.contacts-block-phone {
 	margin-bottom: 24px;
 	a{
 		font-weight: 600;
@@ -87,7 +87,7 @@
 }
 @media(max-width:767px) {
 	.footer{padding-top: 20px;}
-.footer-phone {
+.contacts-block-phone {
 		margin-bottom: 20px;
 		a {
 			font-size: 20px;

@@ -1,21 +1,40 @@
 .header{
-	overflow: hidden;
+	
 	position: sticky;
 	z-index: 10;
 	top: -85px;
 	background-color: #fff;
+	&-buttons{
+		.phone-link{
+			white-space: nowrap;
+
+			@media(max-width:767px) {
+				font-size: 14px;
+				line-height: 17px;
+			}
+		}
+	}
 	&-content{
 		
 		min-height: 82px;
 		border-bottom: 1px solid $lgrey;
+		.logo{
+			@media(max-width:767px){
+				max-width:116px;
+				margin-right: 15px;
+			}
+		}
 	}
 	.button{font-weight: 600; margin-left: 8px;}
 
 	&-bottom-content{
 		padding-top: 2px;
 		padding-bottom: 2px;
+		position: relative;
 		.phone-link{
 			display: none;
+			white-space: nowrap;
+			
 		}
 		.search-button{
 			display: block;
@@ -55,9 +74,16 @@
 		display: flex;
 		align-items: center;
 	}
+	@media(max-width:991px){
+		top: 0;
+		backdrop-filter: blur(5px);
+		background-color: rgba(255,255,255, .8);
+		&-content {
+			border-bottom: 0;}
+	}
 }
 .header.header-fixed {
-	
+	background-color: rgba(255, 255, 255, .8);
 	backdrop-filter: blur(5px);
 	.header-bottom-content {
 		.phone-link {
@@ -127,5 +153,11 @@
 	// &:hover:after,
 	&.active:after {
 		width: 100%;
+	}
+}
+
+@media(max-width:991px){
+	.header-buttons .button,.header-bottom{
+		display: none;
 	}
 }
