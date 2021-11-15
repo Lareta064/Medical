@@ -61,6 +61,9 @@
 				font-size: 20px;
 				line-height: 23px;
 				color: $mint;
+				@media (max-width: 1199px) {
+				font-size:18px;
+				}
 				
 			}
 			
@@ -77,17 +80,20 @@
 	@media(max-width:991px){
 		top: 0;
 		backdrop-filter: blur(5px);
-		background-color: rgba(255,255,255, .8);
+		background-color: rgba(255,255,255, .9);
 		&-content {
 			border-bottom: 0;}
 	}
 }
 .header.header-fixed {
-	background-color: rgba(255, 255, 255, .8);
+	background-color: rgba(255, 255, 255, .9);
 	backdrop-filter: blur(5px);
 	.header-bottom-content {
 		.phone-link {
 			display: block;
+			@media (max-width: 1199px) {
+					font-size: 18px;
+			}
 		}
 
 		.search-button {
@@ -108,7 +114,9 @@
 	height: 50px;
 	font-size: 20px;
 	line-height: 23px;
-	
+	@media (max-width: 1199px) {
+		font-size: 18px;
+	}
 	color: #06323E;
 	&:before{
 		content: '';
@@ -144,7 +152,7 @@
 		content: '';
 		position: absolute;
 		left: 0;
-		bottom: -2px;
+		bottom: 1px;
 		width: 0;
 		height: 2px;
 		background-color: $orange;

@@ -77,8 +77,7 @@ function pageTabsToggle(tabBtn, tabContent){
 				const contentData = block.getAttribute('data-content');				
 				if(thisData == contentData && menuItems[i].classList.contains('active')){
 					block.classList.add('active');
-					overlayBlock.classList.add('active');
-					bodyEl.classList.add('noscroll');
+					
 				}
 			}
 		});
@@ -113,7 +112,9 @@ const headerNav = document.getElementById('headerNav');
 const headerDrop = document.getElementById('headerDrop');
 const teamtabs = document.getElementById('teamTabs');
 const faqTabs = document.getElementById('faqTabs');
+
 pageTabsToggle(headerNav,  headerDrop);
+
 pageTabs(teamTabs,  teamTabs);
 pageTabs(faqTabs,  faqTabs);
 

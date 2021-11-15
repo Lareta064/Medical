@@ -114,9 +114,11 @@
 	width: 0;
 	left:auto;
 	overflow:hidden;
+	opacity: 0;
 	transition: .3s;
 	&.active{
 		width: 1205px;
+		opacity: 1;
 		@media (max-width: 1199px) {
 			width: 960px;
 		}

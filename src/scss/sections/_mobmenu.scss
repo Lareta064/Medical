@@ -23,6 +23,9 @@
 			color:#37F1F4;
 		}
 	}
+	@media(max-width:767px) {
+		padding-bottom: 150px;
+	}
 	@media(max-width:369px){
 		padding-left: 10px;
 		padding-right: 10px;

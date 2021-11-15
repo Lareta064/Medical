@@ -1,0 +1,24 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_mobmenu.pug
+	include ../sections/_header.pug
+	//============= FIRST SCREEN ======================
+	+main-banner('Корсет Шено', 'Безоперационный метод лечения сколиоза с подтвержденной эффективностью', 'service')
+	include ../sections/_usluga-text
+	include ../sections/_discount
+	include ../sections/_social
+	include ../sections/_team
+	include ../sections/_faq
+	include ../sections/_accordeon
+	include ../sections/_benefits
+	include ../sections/_products
+	include ../sections/_price
+	include ../sections/_articles
+	include ../sections/_pink-social
+	include ../sections/_feedback
+	include ../sections/_map
+	include ../sections/_footer
+	
+block variables
+	-var title = "Услуга";
