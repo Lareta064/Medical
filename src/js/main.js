@@ -113,10 +113,16 @@ const headerDrop = document.getElementById('headerDrop');
 const teamtabs = document.getElementById('teamTabs');
 const faqTabs = document.getElementById('faqTabs');
 
-pageTabsToggle(headerNav,  headerDrop);
+if(headerNav){
+	pageTabsToggle(headerNav,  headerDrop);	
+}
+if(teamtabs){
+	pageTabs(teamTabs,  teamTabs);
+}
+if(faqTabs){
+	pageTabs(faqTabs,  faqTabs);
+}
 
-pageTabs(teamTabs,  teamTabs);
-pageTabs(faqTabs,  faqTabs);
 
 /* ========== моб меню - показать выпадающие меню ==========*/
 	const openMenuLevel2 = document.querySelectorAll('.drop-menu_2');

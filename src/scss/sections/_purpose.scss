@@ -1,0 +1,56 @@
+.purpose .color-cards{padding-top: 10px;}
+.color-cards{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 30px;
+	row-gap: 30px;
+	
+	@media (max-width: 767px) {
+	grid-template-columns: repeat(1, 1fr);
+		.color-card p{max-width: 250px; margin-left: auto;
+		margin-right: auto;}
+	}
+}
+.color-card{
+	text-align: center;
+	
+	background: #00859C;
+	border-radius: 30px;
+	min-height: 245px;
+	padding: 40px;
+	padding-left: 50px;
+	padding-right: 50px;
+	p{color: #FFFFFF;}
+	&__title{margin-bottom: 27px; min-height: 60px;}
+	&__title p{
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 1.25;
+		@media (min-width: 768px)and(max-width:991px) {
+			font-size: 19px;
+		}
+	}
+	&__text p{
+		font-size: 18px;
+		line-height: 113%;
+		@media (min-width: 768px)and(max-width:991px) {
+			font-size: 16px;
+		}
+	}
+	@media (max-width: 1279px) {
+		
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	@media (min-width: 768px)and(max-width:991px) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	
+}
+.color-card:nth-child(n+2) {
+	background-color: #C2BEBE;
+	}
+.color-card:nth-child(n+3) {
+	background-color: #F39C98;
+}
