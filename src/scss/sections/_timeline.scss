@@ -1,0 +1,86 @@
+.timeline-content{
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.timeline-item{
+	position: relative;
+	width: 50%;
+	padding-left: 100px;
+	padding-top: 24px;
+	padding-right: 50px;
+	height: 270px;
+	
+	h5{
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 29px;
+		color: #00859C;
+		margin-bottom: 10px;
+	}
+	span{
+		display: inline-block;
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+		color: #fff;
+		background-color: #F39C98;
+		position: absolute;
+		top: 35px;
+		right:-22px;
+		text-align: center;
+		line-height: 45px;
+	}
+	&:after{
+		content:'';
+		width:90px;
+		height: 90px;
+		background-image: url('../img/icons/sun.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	&:before{
+		content: '';
+		width: 2px;
+		position: absolute;
+		bottom: 0;
+		top: 0;
+		right: -1px;
+		background-color: #F39C98;
+	}
+}
+.timeline-item:nth-child(2n){
+	margin-left: auto;
+	padding-left: 170px;
+	&:after{
+		left: 70px;
+	}
+}
+.timeline-item:first-child:before {
+	top:40px;
+}
+.timeline-item:nth-child(2n):before {
+	right: auto;
+	left: -1px;
+}
+.timeline-item:nth-child(2n) span{
+	right: auto;
+	left: -22px;
+	top:23px;
+}
+.timeline-item:nth-child(3) {
+	
+	height: 190px;
+}
+.timeline-item:nth-child(3):before {
+	bottom:60px;
+	
+}
+.timeline-item:nth-child(3) span {
+	top: auto;
+	bottom:60px;
+}

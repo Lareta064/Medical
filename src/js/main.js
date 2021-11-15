@@ -392,5 +392,3 @@ for(let item of priceCardsLink){
 		item.remove();
 	})
 }
-
-
