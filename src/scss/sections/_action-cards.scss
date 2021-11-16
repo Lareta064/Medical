@@ -1,0 +1,44 @@
+.action-cards{
+	.text-title{
+		margin-bottom: 20px;
+	}
+.action-card{
+	border-radius: 30px;
+	position: relative;
+	padding: 40px 46px;
+	min-height: 237px;
+}
+.action-card__text{
+	height: 98px;
+	overflow: hidden;
+	margin-bottom: 10px;
+	max-width:340px;
+}
+.action-cards-wrapper{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 30px;
+	row-gap: 30px;
+}
+.action-card.action-card--first{
+	background-color: #FFD058;
+	.action-card__img{
+		position: absolute;
+		z-index: 2;
+		right: 27px;
+		bottom: 0;
+		width: 204px;
+	}
+	.text-bold{
+		font-size: 36px;
+		line-height: 33px;
+		color: #000000;
+	}
+}
+.action-card.action-card--last{
+	overflow: hidden;
+	background-image: url('../img/action-cardBlue.jpg');
+	background-position: left top;
+	background-repeat: no-repeat;
+}
+}
