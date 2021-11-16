@@ -51,38 +51,8 @@ headerCloseSearch.addEventListener('click', function () {
 	headerSearchForm.classList.remove('active');
 	headerSearchForm.querySelector('input').value = '';
 });
-/*============header-menu ==================*/
-function pageTabsToggle(tabBtn, tabContent){
-	const menuItems = tabBtn.querySelectorAll('[data-role]');
-	const menuItemContent = tabContent.querySelectorAll('[data-content]');
-	for(let i=0; i<menuItems.length; i++ ){
-		menuItems[i].addEventListener('click', ()=>{
-			for(let j=0; j<menuItems.length; j++){
-				if(j !==i){
-					menuItems[j].classList.remove('active');
-				}
-				if(j==i){
-					if(menuItems[j].classList.contains('active')){
-						menuItems[j].classList.remove('active');
-					}else{
-						menuItems[j].classList.add('active');
-					}
-				}
-			}
-			const thisData = menuItems[i].getAttribute('data-role');
-			for(let block of menuItemContent ){
-				block.classList.remove('active');
-				overlayBlock.classList.remove('active');
-				bodyEl.classList.remove('noscroll');
-				const contentData = block.getAttribute('data-content');				
-				if(thisData == contentData && menuItems[i].classList.contains('active')){
-					block.classList.add('active');
-					
-				}
-			}
-		});
-	}
-}
+/*============tabs ==================*/
+
 function pageTabs(tabBtn, tabContent){
 	const menuItems = tabBtn.querySelectorAll('[data-role]');
 	const menuItemContent = tabContent.querySelectorAll('[data-content]');
@@ -113,9 +83,7 @@ const headerDrop = document.getElementById('headerDrop');
 const teamtabs = document.getElementById('teamTabs');
 const faqTabs = document.getElementById('faqTabs');
 
-if(headerNav){
-	pageTabsToggle(headerNav,  headerDrop);	
-}
+
 if(teamtabs){
 	pageTabs(teamTabs,  teamTabs);
 }
@@ -218,65 +186,75 @@ const swiper2 = new Swiper('.faq-tabs__buttons-block', {
   watchOverflow: 'true'
 });
 
-(function() {
-
-  'use strict';
+(function () {
+  "use strict";
 
   // breakpoint where swiper will be destroyed
   // and switches to a dual-column layout
-  const breakpoint = window.matchMedia( '(min-width:768px)' );
+  const breakpoint = window.matchMedia("(min-width:768px)");
 
-  // keep track of swiper instances to destroy later
-  let mySwiper;///////////////////////////////////////////
+  // Create a wariable to hold swipers
+  let swipers = [];
 
-  const breakpointChecker = function() {
-
+  /** Function to switch styles according to the breakpoint */
+  const massBreakpointCheker = function (...args) {
     // if larger viewport and multi-row layout needed
-    if ( breakpoint.matches === true ) {
-
-      // clean up old instances and inline styles when available
-	  if ( mySwiper !== undefined ) mySwiper.destroy( true, true );
-
-	  // or/and do nothing
-	  return;
-
-      // else if a small viewport and single column layout needed
-      } else if ( breakpoint.matches === false ) {
-
-        // fire small viewport version of swiper
-        return enableSwiper();
-
+    for (let i = 0; i < args.length; i++) {
+      if (breakpoint.matches === true) {
+        // clean up old instances and inline styles when available
+        if (swipers[i] !== undefined) {
+          swipers[i].destroy(true, true);
+          swipers.shift();
+        }
+        // or/and do nothing
+        return;
       }
-
-  };
-  const enableSwiper = function() {
-
-    mySwiper = new Swiper ('.swiper-products', {
-
-      loop: true,
-      
-      slidesPerView: 1,
-	  spaceBetween: 30,
-      centeredSlides: true,
-
-      a11y: true,
-      keyboardControl: true,
-      grabCursor: true,
-
-      // pagination
-	  pagination: {
-    	el: '.swiper-products-pagination',
-		 clickable: true,
-  		}
-    });
-
+      // else if a small viewport and single column layout needed
+      else if (breakpoint.matches === false) {
+        // fire small viewport version of swiper
+        return activateSwiper(swipers, args[i][0], args[i][1]);
+      }
+    }
   };
 
-  // keep an eye on viewport size changes
-  breakpoint.addListener(breakpointChecker);
+  /** Initiate swiper with argument params */
+  function activateSwiper(swiperArr, clName1, clName2) {
+    swiperArr.push(
+      new Swiper(clName1, {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        centeredSlides: true,
 
-  // kickstart
-  breakpointChecker();
+        a11y: true,
+        keyboardControl: true,
+        grabCursor: true,
+
+        // pagination
+        pagination: {
+          el: clName2,
+          clickable: true,
+        },
+      })
+    );
+  }
+
+  // Example swiper arguments, add thme to massBreakpointChecker
+  const swips3 = [".swiper-result", ".swiper-result-pagination"];
+  const swips1 = [".swiper-products", ".swiper-products-pagination"];
+  const swips2 = [".swiper", ".swiper-pagination"];
+  
+  
+
+  // Listener to react on the resize
+  breakpoint.addListener(() => {
+    massBreakpointCheker(swips1, swips2);
+    massBreakpointCheker( swips3);
+  });
+
+  // Initiate sweepers, Add arguments here
+  massBreakpointCheker(swips1, swips2);
+  massBreakpointCheker( swips3);
 })(); /* IIFE end */
 (function() {
 
@@ -350,7 +328,76 @@ const swiper2 = new Swiper('.faq-tabs__buttons-block', {
   // kickstart
   breakpointChecker();
 })(); /* IIFE end */
+(function() {
 
+  'use strict';
+
+  // breakpoint where swiper will be destroyed
+  // and switches to a dual-column layout
+  const breakpoint = window.matchMedia( '(min-width:992px)' );
+
+  // keep track of swiper instances to destroy later
+  let mySwiper;///////////////////////////////////////////
+
+  const breakpointChecker = function() {
+
+    // if larger viewport and multi-row layout needed
+    if ( breakpoint.matches === true ) {
+
+      // clean up old instances and inline styles when available
+	  if ( mySwiper !== undefined ) mySwiper.destroy( true, true );
+
+	  // or/and do nothing
+	  return;
+
+      // else if a small viewport and single column layout needed
+      } else if ( breakpoint.matches === false ) {
+
+        // fire small viewport version of swiper
+        return enableSwiper();
+
+      }
+  };
+  const enableSwiper = function() {
+
+    mySwiper = new Swiper ('.articles-swiper2', {
+
+      loop: true,      
+      slidesPerView: 1,
+	  spaceBetween: 30,
+      centeredSlides: true,
+
+      a11y: true,
+      keyboardControl: true,
+      grabCursor: true,
+
+      // pagination
+	  pagination: {
+    	el: '.articles-swiper-pagination',
+		 clickable: true,
+  		},
+		  breakpoints: {
+        574: {
+          slidesPerView: 1.8,
+		  spaceBetween: 10,
+         
+        },
+		768: {
+          slidesPerView: 2.5,
+		  spaceBetween: 30,
+         
+        }
+	}
+    });
+
+  };
+
+  // keep an eye on viewport size changes
+  breakpoint.addListener(breakpointChecker);
+
+  // kickstart
+  breakpointChecker();
+})(); /* IIFE end */
 /*============faq accordeon=============*/
 const accordeonTitle = document.querySelectorAll('.accordeon-item-header');
 const accordeonContent = document.querySelectorAll('.accordeon-item-content');

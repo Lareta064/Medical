@@ -25,6 +25,7 @@
 		
 	}
 }
+.articles-swiper2 .swiper-slide,
 .articles-swiper .swiper-slide{
 	width: 30%;
 	margin-left: 15px;
@@ -65,6 +66,12 @@
 			 line-height: 137%;
 			 color: #000000;
 		}
+		span{
+			font-size: 16px;
+			line-height: 113%;
+			color: #9D9898;
+			display: inline-block;
+		}
 	}
 	.button{
 		margin-top: 20px;
@@ -73,9 +80,24 @@
 		}
 	}
 }
+.articles .articles-swiper2 .articles-swiper-pagination,
 .articles .articles-swiper .articles-swiper-pagination {
 	position: relative;
 	bottom: -10px;
+}
+.articles--promo{
+	.article-card {		
+		.article-card__text {			
+			h3, p {
+				
+				display: block;
+				-webkit-line-clamp: unset;
+				overflow: unset;
+				height: auto;
+			}
+			p{font-weight: 700; margin-bottom: 12px;}
+		}
+	}
 }
 @media (min-width: 992px) {
 

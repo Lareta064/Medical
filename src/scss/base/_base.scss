@@ -235,7 +235,14 @@ line-height: 20px;
 	line-height: 0.933;	
 	color: #000000;
 }
-
+.title-bold p,
+.title-bold h2,
+.title-bold h3,
+.title-bold h4 {
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 29px;
+}
 .text-bold p {
 	font-weight: bold;
 }
