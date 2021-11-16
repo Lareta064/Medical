@@ -1,4 +1,5 @@
 .action-cards{
+	padding-bottom: 20px;
 	.text-title{
 		margin-bottom: 20px;
 	}
@@ -7,18 +8,32 @@
 	position: relative;
 	padding: 40px 46px;
 	min-height: 237px;
+	@media (max-width: 767px) {
+		padding: 40px 25px;
+	}
+	
 }
 .action-card__text{
 	height: 98px;
 	overflow: hidden;
 	margin-bottom: 10px;
 	max-width:340px;
+	@media (max-width: 991px) {
+		max-width:400px;
+		height: auto;
+		min-height: 100px;
+	}
 }
 .action-cards-wrapper{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	column-gap: 30px;
 	row-gap: 30px;
+	@media (max-width: 767px) {
+		grid-template-columns: 1fr;
+		column-gap: 30px;
+		row-gap: 30px;
+	}
 }
 .action-card.action-card--first{
 	background-color: #FFD058;
@@ -28,6 +43,9 @@
 		right: 27px;
 		bottom: 0;
 		width: 204px;
+		@media (max-width: 1199px) {
+			display: none;
+		}
 	}
 	.text-bold{
 		font-size: 36px;
