@@ -479,3 +479,19 @@ $(document).ready(function() {
 	}
   });
 });
+var aboutSwiper = new Swiper(".swiper-about", {
+    spaceBetween: 30,
+    slidesPerView:1,
+    centeredSlides: true,
+    roundLengths: true,
+    loop: true,
+    
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    pagination: {
+    	el: '.about-swiper-pagination',
+		  clickable: true,
+  		}
+  });

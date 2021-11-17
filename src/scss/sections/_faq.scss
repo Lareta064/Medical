@@ -87,13 +87,28 @@
 	}
 }
 .custom-arrow {
-	width: 100%;
+	width: 62px;
+	max-width: 62px;
+	height: 62px;
+	max-height: 62px;
+	border:2px solid #fff;
 	height: 100%;
 	border-radius: 50%;
 	cursor: pointer;
-
+	color: transparent;
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='34' height='35' viewBox='0 0 34 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='34' height='35' fill='%2300859C'/%3e%3cpath d='M8.5 17.4997V13.6059C8.5 8.77886 11.8292 6.79553 15.895 9.21636L19.1675 11.1705L22.44 13.1247C26.5058 15.5455 26.5058 19.4976 22.44 21.9184L19.1675 23.8726L15.895 25.8267C11.8292 28.2038 8.5 26.2351 8.5 21.3934V17.4997Z' stroke='white' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	@media (max-width: 767px) {
+		display: none;
+	}
+}
+.swiper-button-prev.custom-arrow {
+	transform: rotate(180deg);
+}
+.center-pagination{
+	justify-content: center;
+	display: flex;
+	position: relative;
 }

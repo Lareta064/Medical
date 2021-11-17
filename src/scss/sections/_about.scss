@@ -1,0 +1,33 @@
+/*============about us ================*/
+.about-content{
+	justify-content: center;
+	.about-swiper-pagination{display: none;}
+	@media (max-width: 767px) {
+		flex-wrap:wrap;
+		.about-swiper-pagination{display: block; bottom: -20px;}
+	}
+}
+.about-content__list{
+	width: 40%;
+	max-width:390px;
+	padding-right: 30px;
+	@media (max-width: 767px) {
+		width: 100%;
+	}
+}
+.about-content__slider{
+	width: 60%;
+	max-width:530px;
+	overflow: hidden;
+	position: relative;
+	@media (max-width: 767px) {
+		width: 100%;
+		margin-top: 30px;
+		padding-bottom: 30px;
+		
+	}
+	.swiper-about	{width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
