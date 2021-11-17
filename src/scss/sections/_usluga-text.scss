@@ -10,6 +10,7 @@
 		@media(max-width:767px){
 			width: 75px;
 			height: 75px;
+			height: auto;
 			margin-right: 19px;
 		}
 	}
@@ -34,7 +35,7 @@
 	}
 }
 .section-header__title.text-center{text-align: center;}
-.description-content .description-content__text{
+.serv-description-content .serv-description__text {
 	padding-bottom: 35px;
 	p{
 		font-size: 19px;
@@ -43,7 +44,7 @@
 		&+p{margin-top: 1em;}
 	}
 }
-.description-content__footer{
+.serv-description__footer {
 	@media(max-width:767px){
 		flex-direction: column;
 		align-items:flex-start;

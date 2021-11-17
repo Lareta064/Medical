@@ -188,6 +188,7 @@ img{
 	height: 100%;
 	background-image: linear-gradient(45deg, $blue, rgba(255, 160, 70, 1));
 	
+	
 }
 .pt-50{padding-top: 50px;}
 /*============= TYPOGRAPHY =============*/
@@ -225,7 +226,9 @@ img{
 		line-height: 23px;
 	}
 }
-.text-18 p {
+.text-18,
+.text-18 p,
+.text-18 span {
 	font-size: 18px;
 	line-height: 1.33;
 	color: #06323E;
@@ -271,8 +274,8 @@ line-height: 20px;
 .section-header{margin-bottom: 20px;}
 .section-header__title{
 	margin-bottom: 20px;
-	h2{
-		margin-bottom: 6px;
+	.title-2{
+		margin-bottom: 24px;
 	}
 	@media(max-width:599px){
 		text-align: center;
@@ -280,6 +283,9 @@ line-height: 20px;
 		margin-left: auto;
 		margin-right: auto;
 	}
+}
+.section-header .section-header__title .title-2{
+margin-bottom: 6px;
 }
 .red-text {
 	font-weight: 500;
