@@ -1,0 +1,30 @@
+section.videoSlider
+	.container
+		.section-header
+			.section-header__title.text-center
+				h2.title-2 Истории наших пациентов
+				p Этапы создания изделия
+		// Slider main container
+		.swiper-container
+			.video-play
+				span
+			.swiper-wrapper
+				// Slides
+				.swiper-slide
+					.video
+						video(src="video/video.mp4" controls="controls" width="100%" height="100%")
+				.swiper-slide
+					.video
+						video(src="video/video.mp4" controls="controls" width="100%" height="100%")
+				.swiper-slide 
+					.video
+						video(src="video/video.mp4" controls="controls" width="100%" height="100%")
+				.swiper-slide
+					.video
+						video(src="video/video.mp4" controls="controls" width="100%" height="100%")
+				.swiper-slide
+					.video
+						video(src="video/video.mp4" controls="controls" width="100%" height="100%")
+			// If we need navigation buttons
+			.swiper-button-prev.custom-arrow
+			.swiper-button-next.custom-arrow

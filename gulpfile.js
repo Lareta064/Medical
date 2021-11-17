@@ -85,6 +85,10 @@ gulp.task("copy:js", function(callback) {
     return gulp.src("./src/js/**/*.*").pipe(gulp.dest("./build/js/"));
     callback();
 });
+gulp.task("copy:video", function(callback) {
+    return gulp.src("./src/video/**/*.*").pipe(gulp.dest("./build/video/"));
+    callback();
+});
 // группировка меди запросов
 gulp.task('groupmedia', function (callback) {
 
@@ -98,7 +102,7 @@ gulp.task('groupmedia', function (callback) {
 gulp.task("watch", function() {
     // Следим за картинками и скриптами и обновляем браузер
     watch(
-        ["./build/js/**/*.*", "./build/img/**/*.*" , "./build/fonts/**/*.*" , "./build/libs/**/*.*"],
+        ["./build/js/**/*.*", "./build/img/**/*.*" , "./build/fonts/**/*.*" , "./build/libs/**/*.*", "./build/video/**/*.*" ],
         gulp.parallel(browserSync.reload)
     );
 
@@ -115,6 +119,7 @@ gulp.task("watch", function() {
     watch("./src/js/**/*.*", gulp.parallel("copy:js"));
     watch("./src/fonts/**/*.*", gulp.parallel("copy:fonts"));
     watch("./src/libs/**/*.*", gulp.parallel("copy:libs"));
+    watch("./src/libs/**/*.*", gulp.parallel("copy:video"));
 });
 
 // Задача для старта сервера из папки app
@@ -142,7 +147,7 @@ gulp.task(
     "default",
     gulp.series(
         gulp.parallel("clean:build"),
-        gulp.parallel("scss", "pug", "copy:img", "copy:js", "copy:fonts", "copy:libs"),
+        gulp.parallel("scss", "pug", "copy:img", "copy:js", "copy:fonts", "copy:libs", "copy:video"),
         gulp.parallel("groupmedia"),
         gulp.parallel("html:prettify"),
         gulp.parallel("server", "watch")
