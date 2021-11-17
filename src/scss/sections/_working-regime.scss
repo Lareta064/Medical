@@ -81,6 +81,14 @@
 	.working-regime-img{display: none;}
 }
 @media (max-width: 767px) {
+	.working-regime{margin-bottom: 24px;}
+	.section-header__title{
+		max-width: 280px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 24px;
+		.text-23 a {display: inline-block; padding-top: 6px;}
+	}
 	.working-regime-content{
 		flex-direction: column;
 		padding: 30px;
