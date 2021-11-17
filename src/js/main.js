@@ -419,7 +419,7 @@ for (i = 0; i < accordeonTitle.length; i++) {
             
             this.classList.add('show');
             loock = this.nextElementSibling;
-            loock.style.maxHeight = loock.scrollHeight + "px";
+            loock.style.maxHeight = (+loock.scrollHeight+0) + "px";
             
         } else if (this.classList.contains('show')) {
             

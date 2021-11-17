@@ -1,0 +1,35 @@
+.article-page{
+	.section-header p{
+		color: #C2BEBE;
+	}
+	.section-header{margin-bottom: 40px;}
+	.article-page-item{
+		p{
+			font-weight: 300;
+			font-size: 22px;
+			line-height: 25px;
+			color: #000000;
+			&+p{
+				margin-top: 1em;
+			}
+		}
+		img{
+			float: left;
+			margin-top: -60px;
+
+		}
+	}
+	@media (max-width: 767px) {
+	.article-page-item {
+		img {
+			float: unset;
+			display: block;
+			margin-top: 0px;
+
+		}
+		p+p {
+			margin-top: 2px;
+		}
+	}
+	}
+}
