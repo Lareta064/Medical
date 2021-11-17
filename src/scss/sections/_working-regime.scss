@@ -1,0 +1,101 @@
+.working-regime{
+	padding-bottom: 62px;
+	.section-header__title {
+		margin-bottom: 62px;
+	}
+	.text-23{
+		p span{
+			font-weight: bold;
+			font-size: 24px;
+			line-height: 113%;
+			color: #00859C;
+			padding-right: 7px;
+		}
+		a{
+			font-size: 20px;
+			line-height: 113%;
+			border-bottom: 1px solid #5E5E5E;
+			color: #5E5E5E;
+		}
+	}
+}
+.working-regime-content{
+	padding: 45px;
+	padding-left: 245px;
+	border-radius: 30px;
+	background-color:#00859C;
+	position: relative;
+	.working-regime-img{
+		position: absolute;
+		bottom: 0;
+		width: 228px;
+		left: -35px;
+		z-index: 2;
+	}
+	.working-regime-left{padding-right: 30px;}
+	.working-regime-right{width: 263px;}
+	.doctor-name{
+		p{
+			font-weight: bold;
+			font-size: 22px;
+			line-height: 27px;
+			
+			color: #F8F8F9;
+			&+p{
+				font-weight:600 ; 
+				font-size: 17px;
+				line-height: 27px;
+				color:#37F1F4;
+				margin-top: 10px;
+			
+			}
+		}
+	} .doctor-info{
+		margin-top: 20px;
+		p {
+			font-size: 20px;
+			line-height: 25px;
+			color: #FFFFFF;
+		}
+
+	} .working-time{
+		p{
+			font-size: 20px;
+			line-height: 1.15;
+			color: #FFFFFF;
+			font-family: 'Roboto',sans-serif;
+		}
+	}
+	.working-btn{margin-top: 30px;}
+}
+@media (max-width: 1199px) {
+	.working-regime-content {padding-left: 220px;}
+	.working-regime-img {
+		left: -15px;
+	}
+}
+@media (max-width: 991px) {
+	.working-regime-content {
+		padding: 40px;
+	}
+	.working-regime-img{display: none;}
+}
+@media (max-width: 767px) {
+	.working-regime-content{
+		flex-direction: column;
+		padding: 30px;
+		padding-left: 30px;
+		padding-bottom: 0;
+		justify-content: center;
+		align-items: center;
+		.working-regime-img {
+		position: relative;
+		width: 173px;
+		margin-top: 24px;
+		left: auto;
+		display: block;
+		}
+		.working-regime-left{padding-right: 0;}
+		.working-regime-right{margin-top: 24px;}
+	}
+}
