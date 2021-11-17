@@ -1,0 +1,14 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_mobmenu.pug
+	include ../sections/_header.pug
+	//============= FIRST SCREEN ======================
+	+main-banner('Акции и конкурсы', 'Безоперационный метод лечения сколиоза с подтвержденной эффективностью', 'promo')
+	include ../sections/_promo-result
+	include ../sections/_pink-social
+	include ../sections/_feedback
+	include ../sections/_footer
+	
+block variables
+	-var title = "Акции";
