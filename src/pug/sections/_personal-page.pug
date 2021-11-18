@@ -1,0 +1,30 @@
+section.doctor-choice
+	.container
+		.section-header__title.text-center
+			h2.title-2 Выберите специалиста
+		.doctor-choice__content
+			form.doctor-choice-form(action="" method="method")
+				.scroll-block
+					.doctor-choice-form__block
+						h4 Специализация
+						.doctor-choice-form__checkbox.d-flex
+							+checkbox-item('Лечение сколиоза')
+							+checkbox-item('Лечение взрослых')
+							+checkbox-item('Реабилитолог')
+							+checkbox-item('ЛФК')
+							+checkbox-item('УЗИ')
+							
+					.doctor-choice-form__block
+						h4 Клиники
+						.doctor-choice-form__checkbox.d-flex
+							+checkbox-item('Вильгельма де Геннина')
+							+checkbox-item('Луначарского')
+							+checkbox-item('Аптечная')
+							+checkbox-item('Воровского')
+				button.button.button-slim--dark(type="submit") Применить
+section.doctor-cards
+	.container
+		.doctor-cards__wrapper
+			.doctor-card
+				.doctor-card__img
+				.doctor-card__title

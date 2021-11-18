@@ -162,8 +162,6 @@ if(faqTabs){
 	}
 /* ============swiper slider========*/
 const swiper = new Swiper('.swiper', {
-  
-  
   autoplay: {
 	delay: 5000,
 	},
@@ -240,21 +238,24 @@ const swiper2 = new Swiper('.faq-tabs__buttons-block', {
   }
 
   // Example swiper arguments, add thme to massBreakpointChecker
-  const swips3 = [".swiper-result", ".swiper-result-pagination"];
+  
   const swips1 = [".swiper-products", ".swiper-products-pagination"];
   const swips2 = [".swiper", ".swiper-pagination"];
-  
+  const swips3 = [".swiper-result", ".swiper-result-pagination"];
+  const swips4 = [".swiper-library", ".swiper-library-pagination"];
   
 
   // Listener to react on the resize
   breakpoint.addListener(() => {
     massBreakpointCheker(swips1, swips2);
     massBreakpointCheker( swips3);
+   massBreakpointCheker( swips4);
   });
 
   // Initiate sweepers, Add arguments here
   massBreakpointCheker(swips1, swips2);
   massBreakpointCheker( swips3);
+  massBreakpointCheker( swips4);
 })(); /* IIFE end */
 (function() {
 
@@ -495,3 +496,15 @@ var aboutSwiper = new Swiper(".swiper-about", {
 		  clickable: true,
   		}
   });
+
+/*======show all review text=====*/
+const reviewItems = document.querySelectorAll('.review-item');
+if(reviewItems.length > 0){
+  for(let item of reviewItems){
+    
+    item.querySelector('.dashed-link').addEventListener('click', function(){
+      this.previousElementSibling.classList.remove('min-text');
+      this.remove();
+    })
+  }
+}

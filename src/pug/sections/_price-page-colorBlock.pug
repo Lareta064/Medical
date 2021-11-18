@@ -1,20 +1,27 @@
-//=================PRICE ================
-section.price
+section.service-prices.price.pb-60
 	.container
-		.price-content
-			.section-header.d-flex
-				.section-header__title
-					h2.title-2 Цены
-				.section-header__button
-					a(href="price-page.html").button Все цены
-
+		//==========большой блок услуги========
+		.service-prices__block
+			//=========цветной блок ==========
+			.service-colorBlock
+				.colorBg-block.d-flex
+					.colorBg-block-left
+						.colorBg-block-left__top
+							p Консультация врача-ортопеда
+							p Вводный прием — всего 500&nbsp;₽
+						.colorBg-block-left__bottom
+							p Записывайтесь прямо сейчас и начинайте лечение со скидкой
+					.colorBg-block-right
+						.colorBg-block-btn
+							button.button.button-slim--orange Записаться на приём
+			//========= блок с ценами ==========
 			.price-cards-wrapper
 				//======PRICE CARD ========
 				.price-card
 					h4 Комплексный прием врача ортопеда
 					p 1 200 ₽
 					.dashed-link Что входит в стоимость?
-					.price-card__list.basic-list
+					.price-card__list
 						ul
 							li комплексный осмотр 
 							li ортопедические тесты 
@@ -27,7 +34,35 @@ section.price
 					h4 Комплексный прием врача ортопеда
 					p 1 200 ₽
 					.dashed-link Что входит в стоимость?
-					.price-card__list.basic-list
+					.price-card__list
+						ul
+							li комплексный осмотр 
+							li ортопедические тесты 
+							li профилактические рекомендации 
+							li план лечения
+						a(href="#").red-text Что взять с собой на прием
+		//==========большой блок услуги========
+		.service-prices__block
+			//=========цветной блок ==========
+			.service-colorBlock
+				.colorBg-block.d-flex
+					.colorBg-block-left
+						.colorBg-block-left__top
+							p Лечение сколиоза
+							p Вводный прием — всего 500&nbsp;₽
+						.colorBg-block-left__bottom
+							p Записывайтесь прямо сейчас и начинайте лечение со скидкой
+					.colorBg-block-right
+						.colorBg-block-btn
+							button.button.button-slim--orange Записаться на приём
+			//========= блок с ценами ==========
+			.price-cards-wrapper
+				//======PRICE CARD ========
+				.price-card
+					h4 Комплексный прием врача ортопеда
+					p 1 200 ₽
+					.dashed-link Что входит в стоимость?
+					.price-card__list
 						ul
 							li комплексный осмотр 
 							li ортопедические тесты 
@@ -40,26 +75,10 @@ section.price
 					h4 Комплексный прием врача ортопеда
 					p 1 200 ₽
 					.dashed-link Что входит в стоимость?
-					.price-card__list.basic-list
+					.price-card__list
 						ul
 							li комплексный осмотр 
 							li ортопедические тесты 
 							li профилактические рекомендации 
 							li план лечения
 						a(href="#").red-text Что взять с собой на прием
-
-				//======PRICE CARD ========
-				.price-card
-					h4 Комплексный прием врача ортопеда
-					p 1 200 ₽
-					.dashed-link Что входит в стоимость?
-					.price-card__list.basic-list
-						ul
-							li комплексный осмотр 
-							li ортопедические тесты 
-							li профилактические рекомендации 
-							li план лечения
-						a(href="#").red-text Что взять с собой на прием
-			//=====mobile-button ======
-			.section-header__button--mobile
-				a(href="price-page.html").button Все цены

@@ -3,27 +3,19 @@
 	@media(max-width:767px) {
 		padding-bottom: 40px;
 	}
+	.swiper-library{
+		width: 100%;
+		overflow: hidden;
+	}
 	.library-wrapper{
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		column-gap: 60px;
-		row-gap: 30px;
-		
-		@media(max-width:1199px) {
-			column-gap: 30px;
-		}
-		@media(min-width:768px) and (max-width:991px) {
-			column-gap: 10px;
-		}
-		@media(max-width:767px){
-			grid-template-columns: 1fr;
-		}
-
+		display: flex;
+		justify-content: space-between;
 	}
 	.library-item{
 		border-radius: 32px;
 		overflow: hidden;
 	    color: #fff;
+		display: inline-block;
 		max-width:328px;
 		@media(max-width:767px) {
 			margin-left: auto;

@@ -270,6 +270,8 @@ line-height: 20px;
 	padding-top: 6px;
 	border-bottom: 2px dashed #06323E;
 	width: fit-content;
+	font-weight: 600;
+	cursor:pointer;
 }
 .section-header{margin-bottom: 20px;}
 .section-header__title{
@@ -329,5 +331,24 @@ margin-bottom: 6px;
 	}
 	100%{
 		opacity: 1;
+	}
+}
+.scroll-block{
+	overflow: hidden;
+	overflow-y: auto;
+	scrollbar-width: thin;
+	scrollbar-color: $orange #C6DADB ;
+	;
+	height: 200px;
+	&::-webkit-scrollbar-track{
+		background-color: #C6DADB;
+	}
+	&::-webkit-scrollbar{
+		width: 4px;
+		height: 20px;
+	}
+	&::-webkit-scrollbar-thumb{
+		background-color: $orange ;
+		border-radius: 5px;
 	}
 }

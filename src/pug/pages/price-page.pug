@@ -1,0 +1,15 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_mobmenu.pug
+	include ../sections/_header.pug
+	//============= FIRST SCREEN ======================
+	+main-banner('Цены на услуги для пациентов', 'Безоперационный метод лечения сколиоза с подтвержденной эффективностью', 'image')
+	include ../sections/_blockquote
+	include ../sections/_price-page-colorBlock.pug
+	include ../sections/_pink-social
+	include ../sections/_feedback
+	include ../sections/_footer
+	
+block variables
+	-var title = "Цены";

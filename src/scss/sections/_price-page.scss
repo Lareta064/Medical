@@ -1,0 +1,20 @@
+.pb-60 {
+	padding-bottom: 60px;
+	@media (max-width: 767px) {
+	padding-bottom: 30px;
+	}
+}
+.service-prices__block{
+	.price-cards-wrapper{
+		margin-top: 30px;
+		@media (max-width: 767px) {
+			margin-top: 10px;
+		}
+	}
+}
+.service-prices__block+.service-prices__block{
+	margin-top: 40px;
+	@media (max-width: 767px) {
+		margin-top: 30px;
+	}
+}

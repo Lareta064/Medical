@@ -20,3 +20,26 @@ mixin main-banner(title, text, imgSrc)
 				.main-banner__img
 					.img-round
 						img(src="./img/header/"+ imgSrc +".jpg", width="429" alt="img")
+mixin review-item
+	//=========== review item ============
+	.review-item
+		.persone-block
+			.persone-block__img.img-round
+				img(src="./img/doctor.jpg", width="196" alt="img")
+			.persone-block__content
+				.persone-block__title.d-flex
+					.persone-block__title-left
+						h4 Никита Владимирович
+						p 25/08/2021 #[span.rating-item ]
+					.persone-block__title-right
+						a(href="#!").button.button-grey Смотреть фото
+				.persone-text.text-18
+					p.min-text Современный многопрофильный медицинский центр, в котором можно получить широкий спектр врачебных услуг по направлениям: неврология (взрослая и детская), терапия, травматология, гинекология, урология, кардиология, ортопедия, педиатрия, офтальмология, гастроэнтерология, эндокринология Современный многопрофильный медицинский центр, в котором можно получить широкий спектр врачебных услуг по направлениям: неврология (взрослая и детская), терапия, травматология, гинекология, урология, кардиология, ортопедия, педиатрия, офтальмология, гастроэнтерология, эндокринология...
+					span.dashed-link Смотреть весь отзыв
+
+mixin checkbox-item(text)
+	.checkbox-item
+		label
+			input(type="checkbox" name="")
+			.fake-checkbox
+			| #{text}

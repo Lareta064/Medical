@@ -1,0 +1,15 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_mobmenu.pug
+	include ../sections/_header.pug
+	//============= FIRST SCREEN ======================
+	+main-banner('Специалисты клиники', 'Безоперационный метод лечения сколиоза с подтвержденной эффективностью', 'personal')
+	include ../sections/_personal-page
+	
+	include ../sections/_pink-social
+	include ../sections/_feedback
+	include ../sections/_footer
+	
+block variables
+	-var title = "Выбрать врача";
