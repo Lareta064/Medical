@@ -2,6 +2,7 @@
 	border-radius: 30px;
 	padding: 35px;
 	background-color: #F8F8F9;
+	@media (max-width: 767px) {padding: 34px 24px;}
 	.persone-block{
 		align-items: flex-start;
 		@media (max-width: 767px) {

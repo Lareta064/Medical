@@ -245,6 +245,10 @@ line-height: 20px;
 	line-height: 1.22;
 	color: #06323E;
 	margin-bottom: 24px;
+	@media (max-width: 991px) {
+		font-size: 23px;
+		line-height: 27px;
+	}
 }
 .text-title,
 .text-title p,
@@ -359,5 +363,19 @@ margin-bottom: 6px;
 	&::-webkit-scrollbar-thumb{
 		background-color: $orange ;
 		border-radius: 5px;
+	}
+}
+.center-button {
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	margin-top: 40px;
+	
+	.button{min-width: 238px;}
+	@media (max-width: 767px) {
+	.button {
+		width: 100%;
+		min-width: 100%;
+	}
 	}
 }

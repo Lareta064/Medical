@@ -11,6 +11,10 @@
 		font-size: 22px;
 		line-height: 1.45;
 		color: #000000;
+		@media (max-width: 991px) {
+			font-size: 19px;
+			line-height: 29px;
+		}
 	}
 	@media (max-width: 767px) {
 		width: 100%;
@@ -70,6 +74,7 @@
 			max-width:390px;
 			margin-left: auto;
 			margin-right: auto;
+			margin-top: 0;
 		}
 	}
 }
