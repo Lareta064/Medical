@@ -400,38 +400,7 @@ const swiper2 = new Swiper('.faq-tabs__buttons-block', {
   breakpointChecker();
 })(); /* IIFE end */
 /*============faq accordeon=============*/
-const accordeonTitle = document.querySelectorAll('.accordeon-item-header');
-const accordeonContent = document.querySelectorAll('.accordeon-item-content');
-let loock;
 
-for (i = 0; i < accordeonTitle.length; i++) {
-    accordeonTitle[i].addEventListener('click', function() {
-        if (!(this.classList.contains('show'))) {
-
-            for(j = 0; j < accordeonTitle.length; j++) {
-                accordeonTitle[j].classList.remove('show');
-
-                for (k = 0; k < accordeonContent.length; k++) {
-                    this.nextElementSibling;
-                    accordeonContent[k].style.maxHeight = '0px';
-                }
-                
-            }
-            
-            this.classList.add('show');
-            loock = this.nextElementSibling;
-            loock.style.maxHeight = (+loock.scrollHeight+0) + "px";
-            
-        } else if (this.classList.contains('show')) {
-            
-            for(i = 0; i < accordeonTitle.length; i++) {
-                accordeonTitle[i].classList.remove('show');
-                loock.style.maxHeight = '0px';
-
-            }
-        }
-    });
-}
 /* price card hide-text*/
 const priceCardsLink = document.querySelectorAll('.price-card .dashed-link');
 for(let item of priceCardsLink){

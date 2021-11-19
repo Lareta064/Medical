@@ -52,3 +52,53 @@
 	}
 	
 }
+.doctor-cards__wrapper{
+	// margin-left: -25px;
+	// margin-right: -25px;
+	display: flex;
+	flex-wrap:wrap;
+	.doctor-card{
+		width: 29.333%;
+		margin-left: 2%;
+		margin-right: 2%;
+		margin-bottom: 35px;
+		text-align: center;
+		h4{
+			font-size: 22px;
+			line-height: 27px;
+			color: #00859C;
+			font-weight: bold;
+			span{
+				display: block;
+			}
+		}
+		p{
+			font-weight: 500;
+			font-size: 17px;
+			line-height: 20px;
+			color: #000000;
+		}
+		@media (max-width: 1199px) {
+			width: 30.333%;
+			margin-left: 1.5%;
+			margin-right: 1.5%;
+			h4 {
+				font-size: 18px;
+				line-height: 24px;
+			}
+			p {font-size: 15px;}
+		}
+		@media (max-width: 767px) {
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			max-width:356px;
+		}
+	}
+	.doctor-card__img{
+		border-radius: 30px;
+		overflow: hidden;
+		img{border-radius: 30px;}
+	}
+	.doctor-card__title{padding-top: 10px;}
+}

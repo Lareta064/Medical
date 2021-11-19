@@ -5,6 +5,7 @@
   html {
 	scroll-behavior: smooth;
   }
+  
   #overlay{
 	  position: fixed;
 	  top: 0;
@@ -81,10 +82,11 @@
 	padding-top: 42px;
 	padding-bottom: 42px;
 	@media(max-width:767px){
-		padding-top: 35px;
-		padding-bottom: 35px;
+		padding-top: 24px;
+		padding-bottom: 24px;
 	}
   }
+  section + section{padding-top: 0;}
   input[type="radio"], input[type='checkbox'], input[type="submit"]{
 	  appearance: none;
 	  -moz-appearance: none;
@@ -237,6 +239,13 @@ img{
 font-size: 17px;
 line-height: 20px;
 }
+.text-28{
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 1.22;
+	color: #06323E;
+	margin-bottom: 24px;
+}
 .text-title,
 .text-title p,
 .text-title h2,
@@ -338,7 +347,7 @@ margin-bottom: 6px;
 	overflow-y: auto;
 	scrollbar-width: thin;
 	scrollbar-color: $orange #C6DADB ;
-	;
+	padding-right: 10px;
 	height: 200px;
 	&::-webkit-scrollbar-track{
 		background-color: #C6DADB;

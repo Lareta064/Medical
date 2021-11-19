@@ -2,13 +2,12 @@ section.vacancy
 	.container
 		.section-header__title.text-center
 			h2.title-2 Вакансии клиники
-		.vacancy-accordeon
+		.diff-accordeon
 			.accordeon-group
-				//=== один элемент============
-				.accordeon-item
-					.accordeon-item-header(data-name='accordeon-title')
-						h3 Врач-педиатр
-					.accordeon-item-content.loock.hidden
+				.accordeon-group-item
+					input#acor1(type='radio' name='acor' checked='checked')
+					label.accordeon-item-header(for='acor1') Врач-педиатр
+					.accordeon-item-content
 						.accordeon-item__text
 							.basic-list
 								ul
@@ -17,15 +16,12 @@ section.vacancy
 									li опыт работы в программе
 									li ЛФК
 									li опыт не менее 5 лет
-									
 						.accordeon-item__img
 							img(src="./img/vacancy.jpg", width="345"  alt="alt")
-				
-				//=== один элемент============
-				.accordeon-item
-					.accordeon-item-header(data-name='accordeon-title')
-						h3 Врач-ортопед
-					.accordeon-item-content.loock.hidden
+				.accordeon-group-item
+					input#acor2(type='radio' name='acor' )
+					label.accordeon-item-header(for='acor2') Врач-ортопед
+					.accordeon-item-content
 						.accordeon-item__text
 							.basic-list
 								ul
@@ -34,15 +30,12 @@ section.vacancy
 									li опыт работы в программе
 									li ЛФК
 									li опыт не менее 5 лет
-									
 						.accordeon-item__img
 							img(src="./img/vacancy.jpg", width="345"  alt="alt")
-				
-				//=== один элемент============
-				.accordeon-item
-					.accordeon-item-header(data-name='accordeon-title')
-						h3 Рентгенолог
-					.accordeon-item-content.loock.hidden
+				.accordeon-group-item
+					input#acor3(type='radio' name='acor' )
+					label.accordeon-item-header(for='acor3') Рентгенолог
+					.accordeon-item-content
 						.accordeon-item__text
 							.basic-list
 								ul
@@ -51,14 +44,12 @@ section.vacancy
 									li опыт работы в программе
 									li ЛФК
 									li опыт не менее 5 лет
-									
 						.accordeon-item__img
 							img(src="./img/vacancy.jpg", width="345"  alt="alt")
-				//=== один элемент============
-				.accordeon-item
-					.accordeon-item-header(data-name='accordeon-title')
-						h3 Старшая медсестра
-					.accordeon-item-content.loock.hidden
+				.accordeon-group-item
+					input#acor4(type='radio' name='acor' )
+					label.accordeon-item-header(for='acor4') Старшая медсестра
+					.accordeon-item-content
 						.accordeon-item__text
 							.basic-list
 								ul
@@ -67,17 +58,5 @@ section.vacancy
 									li опыт работы в программе
 									li ЛФК
 									li опыт не менее 5 лет
-									
 						.accordeon-item__img
 							img(src="./img/vacancy.jpg", width="345"  alt="alt")
-		.scroll-block
-			.basic-list
-				ul
-					li комплексный осмотр 
-					li ортопедические тесты 
-					li профилактические рекомендации 
-					li план лечения
-					li комплексный осмотр 
-					li ортопедические тесты 
-					li профилактические рекомендации 
-					li план лечения
