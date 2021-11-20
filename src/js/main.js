@@ -470,9 +470,9 @@ var aboutSwiper = new Swiper(".swiper-about", {
   });
 
 /*======show all review text=====*/
-const reviewItems = document.querySelectorAll('.review-item');
-if(reviewItems.length > 0){
-  for(let item of reviewItems){
+const truncateItems = document.querySelectorAll('.truncate-item');
+if(truncateItems.length > 0){
+  for(let item of truncateItems){
     
     item.querySelector('.dashed-link').addEventListener('click', function(){
       this.previousElementSibling.classList.remove('min-text');

@@ -32,15 +32,16 @@
 	}
 	.text-18{
 		line-height: 1.5;
-		p.min-text{
-			display: -webkit-box;
-			-webkit-box-orient: vertical;
-			-webkit-line-clamp: 3;
-			overflow: hidden;
-			
-		}
+		
 	}
 }
 .review-item+.review-item{
 	margin-top: 30px;
+}
+.truncate-item p.min-text{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
+	
 }
