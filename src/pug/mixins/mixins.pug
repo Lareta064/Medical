@@ -25,7 +25,7 @@ mixin main-banner(title, text, imgSrc, soc)
 				.main-banner__img
 					.img-round
 						img(src="./img/header/"+ imgSrc +".jpg", width="429" alt="img")
-mixin review-item(arg, countNum)
+mixin review-item(arg, countNum,ind)
 	//=========== review item ============
 	.review-item.truncate-item
 		.persone-block
@@ -39,7 +39,11 @@ mixin review-item(arg, countNum)
 							span  31/08/2021
 							+rating-block(arg, countNum)
 					.persone-block__title-right
-						a(href="#!").button.button-grey Смотреть фото
+						a(href="#"+ind).modal-inline.button.button-grey Смотреть фото
+						div(id=""+ind style='display: none;')
+							
+							p
+								img(src="./img/doc1.png", alt="alt")
 				.persone-text.text-18
 					p.min-text Современный многопрофильный медицинский центр, в котором можно получить широкий спектр врачебных услуг по направлениям: неврология (взрослая и детская), терапия, травматология, гинекология, урология, кардиология, ортопедия, педиатрия, офтальмология, гастроэнтерология, эндокринология Современный многопрофильный медицинский центр, в котором можно получить широкий спектр врачебных услуг по направлениям: неврология (взрослая и детская), терапия, травматология, гинекология, урология, кардиология, ортопедия, педиатрия, офтальмология, гастроэнтерология, эндокринология...
 					span.dashed-link Весь отзыв

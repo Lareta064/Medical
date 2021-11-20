@@ -45,3 +45,9 @@
 	overflow: hidden;
 	
 }
+.fancybox-close-small:after {
+	content: '\2716';
+	}
+.fancybox-slide>*{
+	background-color: transparent;
+}

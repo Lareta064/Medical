@@ -246,6 +246,8 @@ const swiper2 = new Swiper('.faq-tabs__buttons-block', {
   const swips2 = [".swiper", ".swiper-pagination"];
   const swips3 = [".swiper-result", ".swiper-result-pagination"];
   const swips4 = [".swiper-library", ".swiper-library-pagination"];
+  const swips5 = [".swiper-sertificate", ".swiper-sertificate-pagination"];
+ 
   
 
   // Listener to react on the resize
@@ -253,12 +255,14 @@ const swiper2 = new Swiper('.faq-tabs__buttons-block', {
     massBreakpointCheker(swips1, swips2);
     massBreakpointCheker( swips3);
    massBreakpointCheker( swips4);
+   massBreakpointCheker( swips5);
   });
 
   // Initiate sweepers, Add arguments here
   massBreakpointCheker(swips1, swips2);
   massBreakpointCheker( swips3);
   massBreakpointCheker( swips4);
+  massBreakpointCheker( swips5);
 })(); /* IIFE end */
 (function() {
 
@@ -527,3 +531,29 @@ mySelectBlocks.forEach((item, i) =>{
 	}
 });
 }
+$(document).ready(function(){
+	$('[data-fancybox="gallery"]').fancybox({
+		animationEffect: "zoom",
+		loop: true,
+		animationDuration: 500,
+		slideClass: "fancy-foto"
+		});
+    $(function(){
+	$(".modal-inline").fancybox({
+		closeBtn: false,
+		modal: false,
+		margin: 0,
+		padding: 20,
+		maxWidth: 400,
+		autoScale: true,
+		transitionIn: 'none',
+		transitionOut: 'none',
+		type: 'inline',
+		helpers: {
+			overlay: {
+				locked: false
+			}
+		}
+	});
+});
+});

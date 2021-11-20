@@ -79,11 +79,11 @@
   }
   
   section {
-	padding-top: 42px;
-	padding-bottom: 42px;
+	padding-top: 60px;
+	padding-bottom: 60px;
 	@media(max-width:767px){
-		padding-top: 24px;
-		padding-bottom: 24px;
+		padding-top: 30px;
+		padding-bottom: 30px;
 	}
   }
   section + section{padding-top: 0;}
@@ -291,7 +291,7 @@ line-height: 20px;
 }
 .section-header{margin-bottom: 20px;}
 .section-header__title{
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 	.title-2{
 		margin-bottom: 24px;
 	}
