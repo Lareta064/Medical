@@ -199,6 +199,9 @@ img{
 	font-size: 53px;
 	line-height: 1;
 	color: $blue;
+	@media(max-width:1199px) {
+		font-size: 48px;
+	}
 	@media(max-width:991px){
 		font-size: 31px;
 	}

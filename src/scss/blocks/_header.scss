@@ -168,3 +168,21 @@
 		display: none;
 	}
 }
+.header-social.d-flex{
+	justify-content: flex-start;
+	align-items: center;
+	margin-top: 24px;
+	@media (max-width: 767px) {
+		justify-content: center;
+	}
+	p{
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 32px;
+		color: #06323E;
+		padding-right: 24px;
+		@media (max-width:1199px) {
+		display: none;
+		}
+	}
+}

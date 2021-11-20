@@ -5,7 +5,7 @@ mixin menu-list(title, items)
 			each item in items
 				li
 					a(href="#") #{item.text}
-mixin main-banner(title, text, imgSrc)
+mixin main-banner(title, text, imgSrc, soc)
 	.main-banner
 		.container
 			.main-banner-content.d-flex
@@ -16,12 +16,16 @@ mixin main-banner(title, text, imgSrc)
 						.text-24
 							p !{text}
 					button.button.button-big--dark(type="button") Записаться на прием
-				
+					if soc
+						.header-social.d-flex
+							p Поделиться с врачом
+							.header-social__content
+								img(src="./img/"+soc+".png", width="245" alt="alt")
 				//======IMAGE=====
 				.main-banner__img
 					.img-round
 						img(src="./img/header/"+ imgSrc +".jpg", width="429" alt="img")
-mixin review-item
+mixin review-item(arg, countNum)
 	//=========== review item ============
 	.review-item
 		.persone-block
@@ -31,7 +35,9 @@ mixin review-item
 				.persone-block__title.d-flex
 					.persone-block__title-left
 						h4 Никита Владимирович
-						p 25/08/2021 #[span.rating-item ]
+						.result-card-rating
+							span  31/08/2021
+							+rating-block(arg, countNum)
 					.persone-block__title-right
 						a(href="#!").button.button-grey Смотреть фото
 				.persone-text.text-18
@@ -44,3 +50,32 @@ mixin checkbox-item(text)
 			input(type="checkbox" name="")
 			.fake-checkbox
 			| #{text}
+
+mixin result-card(btntext, text)
+	.swiper-slide.result-card
+		.result-card__img
+			img(src="./img/result.jpg", width="568" alt="img")
+		.result-card__body.d-flex
+			.result-card-text
+				.title-bold
+					p Результаты наших пациентов
+				span Срок акции: 31/08/2021 
+			.button.button-small--orange #{btntext}
+		if text
+			.result-card__footer
+				p #{text}
+
+mixin rating-block(num, dataCount)
+	p.rating-block(data-rating)
+		span.rating-block-passive
+			-var start = 0;
+			- for (var i = start; i < num; i++) { 
+				i
+				- }
+				
+		span.rating-block-active(data-count=""+ dataCount)
+			-var start = 0;
+			- for (var i = start; i < num; i++) { 
+				i
+				- }
+			

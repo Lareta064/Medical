@@ -21,8 +21,8 @@
 	}
 }
 .main-banner__text{
-	width: 48%;
-	max-width:500px;
+	width: 50%;
+	
 	h1{
 		margin-bottom: 10px;
 		@media(max-width:767px){
@@ -34,6 +34,10 @@
 		@media(max-width:767px){
 			display: none;
 		}
+	}
+	@media(max-width:1279px) {
+		width: 48%;
+		max-width:500px
 	}
 	@media(max-width:767px) {
 		width: 100%;
