@@ -1,3 +1,19 @@
+mixin office-card
+	//====== office card ======
+	.office-card
+		.office-card__img
+			img(src="./img/office.jpg", width="532"  alt="alt")
+		.office-card__text
+			h3.office-card-title ОРТО-МЕД на Воровского
+			p Клиника ортопедического здоровья 8:00-18:00
+			.office-location
+				p Челябинск, ул. Воровского, д. 81
+		.office-benefits
+			.office-benefits__parking
+				p есть удобная парковка
+			.office-benefits__saloon
+				p есть ортопедический салон
+				
 section.offices-benefits
 	.container
 		//=====Преимущества ======
@@ -11,3 +27,63 @@ section.offices-benefits
 			.decore-text
 				p.text-18 Ведет прием 
 				span.text-18 в разных городах России
+
+//=============offices tabs ===========
+section.offices-tabs
+	.container
+		.offices-tabs-block#officesTabs
+			.offices-tabs__buttons.d-flex
+				//=========== desktop btns=======
+				.offices-tabs__list
+					button.offices__btn.active(data-role="1") Москва
+					
+					button.offices__btn(data-role="2") Санкт-Петербург
+					
+					button.offices__btn(data-role="3") Тюмень
+					
+					button.offices__btn(data-role="4") Самара
+					
+					button.offices__btn(data-role="5") Краснодар
+				
+				//======= mobile btns ========
+				.offices-tabs__list-mobile
+					.mySelect
+						.mySelect-icon
+						.mySelect-input
+							input.selectValue(type='text' readonly='' value='Москва')
+						.mySelect-drop
+							input.mySelect-options(type='text' readonly='' value='Москва' data-role="1")
+							input.mySelect-options(type='text' readonly='' value='Санкт-Петербург' data-role="2")
+							input.mySelect-options(type='text' readonly='' value='Самара' data-role="3")
+							input.mySelect-options(type='text' readonly='' value='Тюмень' data-role="4")
+				//=======checkbox======
+				form.offices-form(action="")
+					+checkbox-item('Показать города-партнёры')
+			
+			.offices-tabs-wrapper
+				.offices-tabs__content.active(data-content="1")
+					.office-cards
+						+office-card
+						+office-card
+						+office-card
+						+office-card
+				.offices-tabs__content(data-content="2")
+					.office-cards
+						+office-card
+						+office-card
+						
+				.offices-tabs__content(data-content="3")
+					.office-cards
+						+office-card
+						+office-card
+						+office-card
+						+office-card
+				.offices-tabs__content(data-content="4")
+					.office-cards
+						+office-card
+						+office-card
+						
+				.offices-tabs__content(data-content="5")
+					.office-cards
+						+office-card
+						+office-card

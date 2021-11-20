@@ -82,6 +82,7 @@ const headerNav = document.getElementById('headerNav');
 const headerDrop = document.getElementById('headerDrop');
 const teamtabs = document.getElementById('teamTabs');
 const faqTabs = document.getElementById('faqTabs');
+const officesTabs = document.getElementById('officesTabs');
 
 
 if(teamtabs){
@@ -90,7 +91,9 @@ if(teamtabs){
 if(faqTabs){
 	pageTabs(faqTabs,  faqTabs);
 }
-
+if(officesTabs){
+	pageTabs(officesTabs,  officesTabs);
+}
 
 /* ========== моб меню - показать выпадающие меню ==========*/
 	const openMenuLevel2 = document.querySelectorAll('.drop-menu_2');
@@ -488,4 +491,39 @@ if(ratingBlock){
 		const activeBlockWidth = +(((itemActiveVal / itemActiveLength) * 100)+0.2) ;//0.5 погрешность нп расстояние между звездами
 		itemActive.style.width =`${activeBlockWidth}%`;
 	});
+}
+/*=========== custom select ===========*/
+const mySelectBlocks = Array.from(document.getElementsByClassName('mySelect'));
+if(mySelectBlocks){
+mySelectBlocks.forEach((item, i) =>{
+	const mySelect = item.querySelector('.mySelect-input');
+	const mySelectInput = item.querySelector('.selectValue');
+	let mySelectOptions = item.querySelectorAll('.mySelect-options');
+	const mySelectIcon = item.querySelector('.mySelect-icon');
+	const mySelecDrop = item.querySelector('.mySelect-drop');
+
+	mySelect.addEventListener('click', ()=>{
+
+		if(mySelecDrop.classList.contains('active')){
+			mySelecDrop.classList.remove('active');
+			mySelectIcon.classList.remove('active');
+			mySelect.classList.remove('open');
+
+
+		}else{
+			mySelecDrop.classList.add('active');
+			mySelectIcon.classList.add('active');
+			mySelect.classList.add('open');
+		}
+
+	});
+	for(let item of mySelectOptions){
+		item.addEventListener('click', ()=>{
+			mySelecDrop.classList.remove('active');
+			mySelectIcon.classList.remove('active');
+			mySelectInput.value = item.value;
+
+		});
+	}
+});
 }
