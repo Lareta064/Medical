@@ -67,14 +67,14 @@
 .accordeon-group .accordeon-item-content {
 
 	margin: 0 auto;
-	height: 0;
+	display: none;
 	color: rgba(0, 0, 0, 0);
 
 	line-height: 18px;
 	// padding: 0 30px;
 	box-sizing: border-box;
 	transition: color 0.5s, padding 0.5s;
-	overflow: hidden;
+	// overflow: hidden;
 
 }
 
@@ -91,7 +91,7 @@
 	display: block;
 	padding: 15px 20px;
 	width: 100%;
-	z-index: 100;
+	z-index: 7;
 	margin: 0 0 5px;
 	transition: color .35s;
 	position: relative;
@@ -128,8 +128,9 @@
 }
 
 .accordeon-group input:checked+.accordeon-item-header+.accordeon-item-content {
-	height: auto;
+	// height: auto;
 	margin-top: -5px;
 	color: #000;
+	display: flex;
 	// padding: 20px 30px 10px;
 }

@@ -14,7 +14,7 @@
 	  right: 0;
 	  z-index: 9;
 	  background-color: rgba(255,255,255, .57);
-	  backdrop-filter: blur(5px);
+	//   backdrop-filter: blur(5px);
 	  display: none;
 	  &.active{display: block;}
   }
@@ -192,7 +192,7 @@ img{
 	
 	
 }
-.pt-50{padding-top: 50px;}
+.mb-50{margin-bottom: 50px;}
 /*============= TYPOGRAPHY =============*/
 .title-1{
 	font-weight: 800;
@@ -270,6 +270,7 @@ line-height: 20px;
 	font-weight: bold;
 	font-size: 24px;
 	line-height: 29px;
+	@media(min-width:768px) and (max-width:991px){font-size: 20px;}
 }
 .text-bold p {
 	font-weight: bold;
@@ -289,9 +290,10 @@ line-height: 20px;
 	font-weight: 600;
 	cursor:pointer;
 }
-.section-header{margin-bottom: 20px;}
+.section-header{margin-bottom: 24px;}
 .section-header__title{
 	margin-bottom: 40px;
+
 	.title-2{
 		margin-bottom: 24px;
 	}
@@ -302,6 +304,7 @@ line-height: 20px;
 		margin-right: auto;
 	}
 }
+.section-header.d-flex .section-header__title {margin-bottom: 0;}
 .section-header .section-header__title .title-2{
 margin-bottom: 6px;
 }

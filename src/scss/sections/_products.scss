@@ -17,6 +17,9 @@
 	margin-bottom: 30px;
 	/* just enough width so slides handing off screen are partially visible */
 	width: 73.8%;
+	@media(min-width:768px) {
+		margin-bottom: 0;
+	}
 	@media(min-width:1200px){width: 100%;}
 }
 .swiper-pagination-bullet.swiper-pagination-bullet-active{background-color: $mint;}

@@ -102,3 +102,8 @@
 	}
 	.doctor-card__title{padding-top: 10px;}
 }
+.doctor-choice-form .button{
+	@media (max-width: 767px) {
+		width: 100%;
+	}
+}

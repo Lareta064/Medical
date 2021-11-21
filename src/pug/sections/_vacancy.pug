@@ -1,11 +1,11 @@
-section.vacancy
+section.vacancy#vacancy
 	.container
 		.section-header__title.text-center
 			h2.title-2 Вакансии клиники
 		.diff-accordeon
 			.accordeon-group
 				.accordeon-group-item
-					input#acor1(type='radio' name='acor' checked='checked')
+					input#acor1(type='checkbox' name='acor' checked='checked')
 					label.accordeon-item-header(for='acor1') Врач-педиатр
 					.accordeon-item-content
 						.accordeon-item__text
@@ -19,7 +19,7 @@ section.vacancy
 						.accordeon-item__img
 							img(src="./img/vacancy.jpg", width="345"  alt="alt")
 				.accordeon-group-item
-					input#acor2(type='radio' name='acor' )
+					input#acor2(type='checkbox' name='acor' )
 					label.accordeon-item-header(for='acor2') Врач-ортопед
 					.accordeon-item-content
 						.accordeon-item__text
@@ -33,7 +33,7 @@ section.vacancy
 						.accordeon-item__img
 							img(src="./img/vacancy.jpg", width="345"  alt="alt")
 				.accordeon-group-item
-					input#acor3(type='radio' name='acor' )
+					input#acor3(type='checkbox' name='acor' )
 					label.accordeon-item-header(for='acor3') Рентгенолог
 					.accordeon-item-content
 						.accordeon-item__text

@@ -164,7 +164,7 @@ if(officesTabs){
 		showSubmenu(item, '.submenu-3');
 	}
 /* ============swiper slider========*/
-const swiper = new Swiper('.swiper', {
+/*const swiper = new Swiper('.swiper', {
   autoplay: {
 	delay: 5000,
 	},
@@ -187,7 +187,7 @@ const swiper2 = new Swiper('.faq-tabs__buttons-block', {
   watchOverflow: 'true'
 });
 
-(function () {
+/*(function () {
   "use strict";
 
   // breakpoint where swiper will be destroyed
@@ -198,7 +198,7 @@ const swiper2 = new Swiper('.faq-tabs__buttons-block', {
   let swipers = [];
 
   /** Function to switch styles according to the breakpoint */
-  const massBreakpointCheker = function (...args) {
+  /*const massBreakpointCheker = function (...args) {
     // if larger viewport and multi-row layout needed
     for (let i = 0; i < args.length; i++) {
       if (breakpoint.matches === true) {
@@ -219,7 +219,7 @@ const swiper2 = new Swiper('.faq-tabs__buttons-block', {
   };
 
   /** Initiate swiper with argument params */
-  function activateSwiper(swiperArr, clName1, clName2) {
+  /*function activateSwiper(swiperArr, clName1, clName2) {
     swiperArr.push(
       new Swiper(clName1, {
         loop: true,
@@ -242,29 +242,29 @@ const swiper2 = new Swiper('.faq-tabs__buttons-block', {
 
   // Example swiper arguments, add thme to massBreakpointChecker
   
-  const swips1 = [".swiper-products", ".swiper-products-pagination"];
-  const swips2 = [".swiper", ".swiper-pagination"];
-  const swips3 = [".swiper-result", ".swiper-result-pagination"];
-  const swips4 = [".swiper-library", ".swiper-library-pagination"];
-  const swips5 = [".swiper-sertificate", ".swiper-sertificate-pagination"];
+  // const swips1 = [".swiper-products", ".swiper-products-pagination"];
+  // const swips2 = [".swiper", ".swiper-pagination"];
+  // const swips3 = [".swiper-result", ".swiper-result-pagination"];
+  // const swips4 = [".swiper-library", ".swiper-library-pagination"];
+  // const swips5 = [".swiper-sertificate", ".swiper-sertificate-pagination"];
  
   
 
   // Listener to react on the resize
-  breakpoint.addListener(() => {
-    massBreakpointCheker(swips1, swips2);
-    massBreakpointCheker( swips3);
-   massBreakpointCheker( swips4);
-   massBreakpointCheker( swips5);
-  });
+  // breakpoint.addListener(() => {
+  //   massBreakpointCheker(swips1, swips2);
+  //   massBreakpointCheker( swips3);
+  //  massBreakpointCheker( swips4);
+  //  massBreakpointCheker( swips5);
+  // });
 
   // Initiate sweepers, Add arguments here
-  massBreakpointCheker(swips1, swips2);
-  massBreakpointCheker( swips3);
-  massBreakpointCheker( swips4);
-  massBreakpointCheker( swips5);
-})(); /* IIFE end */
-(function() {
+  // massBreakpointCheker(swips1, swips2);
+  // massBreakpointCheker( swips3);
+  // massBreakpointCheker( swips4);
+  // massBreakpointCheker( swips5);
+ /*})(); /* IIFE end */
+/*(function() {
 
   'use strict';
 
@@ -336,7 +336,7 @@ const swiper2 = new Swiper('.faq-tabs__buttons-block', {
   // kickstart
   breakpointChecker();
 })(); /* IIFE end */
-(function() {
+/*(function() {
 
   'use strict';
 
@@ -417,7 +417,7 @@ for(let item of priceCardsLink){
 	})
 }
 /************/
-$(document).ready(function() {
+/*$(document).ready(function() {
   // Assign some jquery elements we'll need
   var $swiper = $(".swiper-container");
   var $bottomSlide = null; // Slide whose content gets 'extracted' and placed
@@ -456,7 +456,7 @@ $(document).ready(function() {
 	}
   });
 });
-var aboutSwiper = new Swiper(".swiper-about", {
+/*var aboutSwiper = new Swiper(".swiper-about", {
     spaceBetween: 30,
     slidesPerView:1,
     centeredSlides: true,
@@ -472,7 +472,7 @@ var aboutSwiper = new Swiper(".swiper-about", {
 		  clickable: true,
   		}
   });
-
+*/
 /*======show all review text=====*/
 const truncateItems = document.querySelectorAll('.truncate-item');
 if(truncateItems.length > 0){
@@ -499,37 +499,37 @@ if(ratingBlock){
 /*=========== custom select ===========*/
 const mySelectBlocks = Array.from(document.getElementsByClassName('mySelect'));
 if(mySelectBlocks){
-mySelectBlocks.forEach((item, i) =>{
-	const mySelect = item.querySelector('.mySelect-input');
-	const mySelectInput = item.querySelector('.selectValue');
-	let mySelectOptions = item.querySelectorAll('.mySelect-options');
-	const mySelectIcon = item.querySelector('.mySelect-icon');
-	const mySelecDrop = item.querySelector('.mySelect-drop');
+  mySelectBlocks.forEach((item, i) =>{
+    const mySelect = item.querySelector('.mySelect-input');
+    const mySelectInput = item.querySelector('.selectValue');
+    let mySelectOptions = item.querySelectorAll('.mySelect-options');
+    const mySelectIcon = item.querySelector('.mySelect-icon');
+    const mySelecDrop = item.querySelector('.mySelect-drop');
 
-	mySelect.addEventListener('click', ()=>{
+    mySelect.addEventListener('click', ()=>{
 
-		if(mySelecDrop.classList.contains('active')){
-			mySelecDrop.classList.remove('active');
-			mySelectIcon.classList.remove('active');
-			mySelect.classList.remove('open');
+      if(mySelecDrop.classList.contains('active')){
+        mySelecDrop.classList.remove('active');
+        mySelectIcon.classList.remove('active');
+        mySelect.classList.remove('open');
 
 
-		}else{
-			mySelecDrop.classList.add('active');
-			mySelectIcon.classList.add('active');
-			mySelect.classList.add('open');
-		}
+      }else{
+        mySelecDrop.classList.add('active');
+        mySelectIcon.classList.add('active');
+        mySelect.classList.add('open');
+      }
 
-	});
-	for(let item of mySelectOptions){
-		item.addEventListener('click', ()=>{
-			mySelecDrop.classList.remove('active');
-			mySelectIcon.classList.remove('active');
-			mySelectInput.value = item.value;
+    });
+    for(let item of mySelectOptions){
+      item.addEventListener('click', ()=>{
+        mySelecDrop.classList.remove('active');
+        mySelectIcon.classList.remove('active');
+        mySelectInput.value = item.value;
 
-		});
-	}
-});
+      });
+    }
+  });
 }
 $(document).ready(function(){
 	$('[data-fancybox="gallery"]').fancybox({
@@ -538,22 +538,208 @@ $(document).ready(function(){
 		animationDuration: 500,
 		slideClass: "fancy-foto"
 		});
-    $(function(){
-	$(".modal-inline").fancybox({
-		closeBtn: false,
-		modal: false,
-		margin: 0,
-		padding: 20,
-		maxWidth: 400,
-		autoScale: true,
-		transitionIn: 'none',
-		transitionOut: 'none',
-		type: 'inline',
-		helpers: {
-			overlay: {
-				locked: false
-			}
-		}
-	});
+  $(function(){
+    $(".modal-inline").fancybox({
+      closeBtn: false,
+      modal: false,
+      margin: 0,
+      padding: 20,
+      maxWidth: 400,
+      autoScale: true,
+      transitionIn: 'none',
+      transitionOut: 'none',
+      type: 'inline',
+      helpers: {
+        overlay: {
+          locked: false
+        }
+      }
+    });
+  });
 });
-});
+/*=======================SWIPER CLASS ===================*/
+(function () {
+  // Activate swipers
+  const swips = new Swips();
+  /*Глав желтый блок*/
+  swips.addSwiper(".swiper", "", {
+    autoplay: {
+      delay: 5000,
+    },
+    speed: 2000,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+  /* видео */
+  swips.addSwiper(".swiper-container", "",{
+    spaceBetween: 10,
+    slidesPerView:1,
+    centeredSlides: true,
+    roundLengths: true,
+    loop: true,
+    loopAdditionalSlides: 30,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    breakpoints: {
+        574: {
+          slidesPerView: 1,
+		      spaceBetween: 10,
+         
+        },
+        768: {
+              slidesPerView: 3,
+              spaceBetween: -30,
+            
+        },
+        1200: {
+          slidesPerView: 3,
+		      spaceBetween: -30,
+         
+        }
+	}
+  });
+  /*Глав табы с кнопкой справа*/
+  swips.addSwiper(".faq-tabs__buttons-block", "", {
+    slidesPerView: 3.5,
+
+    navigation: {
+      nextEl: "#faqArrow",
+    },
+    scrollbar: {
+      el: ".faq-scrollbar",
+      draggable: true,
+    },
+    watchOverflow: "true",
+  });
+  /*Глав карточки с обувью*/
+  swips.addSwiper(".swiper-products", "min-width:768px", {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    centeredSlides: true,
+
+    a11y: true,
+    keyboardControl: true,
+    grabCursor: true,
+
+    // pagination
+    pagination: {
+      el: ".swiper-products-pagination",
+      clickable: true,
+    },
+  });
+  /*стр Акции -новости*/
+  swips.addSwiper(".swiper-result", "min-width:768px", {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    centeredSlides: true,
+
+    a11y: true,
+    keyboardControl: true,
+    grabCursor: true,
+
+    // pagination
+    pagination: {
+      el: ".swiper-result-pagination",
+      clickable: true,
+    },
+  });
+   /*стр Статья -статьи ведущих врачей*/
+  swips.addSwiper(".swiper-library", "min-width:992px", {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    centeredSlides: true,
+
+    a11y: true,
+    keyboardControl: true,
+    grabCursor: true,
+
+    // pagination
+    pagination: {
+      el: ".swiper-library-pagination",
+      clickable: true,
+    },
+    
+      breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      }
+    }
+  });
+  /*стр Глав -с желтым зонтиком*/
+  swips.addSwiper(".articles-swiper", "min-width:992px", {
+    loop: true,
+
+    slidesPerView: 1,
+    spaceBetween: 30,
+    centeredSlides: true,
+
+    a11y: true,
+    keyboardControl: true,
+    grabCursor: true,
+
+    // pagination
+    pagination: {
+      el: ".articles-swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      574: {
+        slidesPerView: 1.8,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 2.5,
+        spaceBetween: 30,
+      },
+    },
+  });
+  /* сертификаты*/
+  swips.addSwiper(".swiper-sertificate", "min-width:992px", {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    centeredSlides: true,
+
+    a11y: true,
+    keyboardControl: true,
+    grabCursor: true,
+
+    // pagination
+    pagination: {
+      el: ".swiper-sertificate-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      600: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      }
+    }
+  });
+  /* слайдер в аккордеоне документ */
+  swips.addSwiper(".swiper-about", "",{
+    spaceBetween: 30,
+    slidesPerView:1,
+    centeredSlides: true,
+    roundLengths: true,
+    loop: true,
+    
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    pagination: {
+    	el: '.about-swiper-pagination',
+		  clickable: true,
+  		}
+  })
+  swips.init();
+})();

@@ -8,8 +8,17 @@
 		overflow: hidden;
 	}
 	.library-wrapper{
-		display: flex;
-		justify-content: space-between;
+		display:grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 48px;
+		row-gap: 30px;
+		@media(max-width:1199px) {
+			column-gap: 15px;
+		}
+		@media(max-width:991px){
+			display: flex;
+			justify-content: space-between;
+		}
 	}
 	.library-item{
 		border-radius: 32px;
@@ -17,7 +26,7 @@
 	    color: #fff;
 		display: inline-block;
 		max-width:328px;
-		@media(max-width:767px) {
+		@media(max-width:991px) {
 			margin-left: auto;
 			margin-right: auto;
 		}

@@ -4,7 +4,7 @@
 	.about-swiper-pagination{display: none;}
 	@media (max-width: 767px) {
 		flex-wrap:wrap;
-		.about-swiper-pagination{display: block; bottom: -20px;}
+		.about-swiper-pagination{display: block; bottom: -20px; text-align: center;}
 	}
 }
 .about-content__list{
