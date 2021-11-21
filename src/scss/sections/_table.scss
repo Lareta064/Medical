@@ -1,0 +1,51 @@
+
+.table-block-content{
+	padding-top: 24px;
+	margin-bottom: 24px;
+	padding-bottom: 15px;
+	width: 100%;
+	overflow:hidden;
+	overflow-x: auto;
+	scrollbar-width: thin;
+	scrollbar-color: red green;
+	@media(max-width:1199px){
+		width: calc(100% + (50vw - 50%));
+		padding-right: 20px;
+	}
+	&::-webkit-scrollbar{
+		width: 20px;
+		height: 5px;
+	}
+	&::-webkit-scrollbar-track{
+		background-color: #F3F5F6;
+	}
+	&::-webkit-scrollbar-thumb {
+		height: 15px;
+		background-color: $orange;
+	}
+	table{
+		border-collapse: collapse;
+		width: 100%;
+		min-width: 1000px;
+		max-width: 1200px;
+		th{
+			background-color: #00859C;
+			color: #fff;
+			font-weight: bold;
+			font-size: 20px;
+			line-height: 182%;
+			padding: 20px 30px;
+			text-align: left;
+		}
+		td{
+			background-color: #F3F5F6;
+			border-top: 4px solid #ffffff;
+			padding: 20px 30px;
+			font-size: 18px;
+			line-height: 170%;
+			color: #000000;
+
+		}		
+		
+	}
+}
